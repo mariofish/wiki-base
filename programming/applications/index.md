@@ -1,0 +1,15 @@
+# Applications
+
+- [neovim](/programming/applications/neovim/index.md)
+  - [nvim Startup Time](/programming/applications/neovim/nvim-startup-time.md)
+  - [nvim Lsp Highlight Colors](/programming/applications/neovim/nvim-lsp-highlight-colors.md)
+- [vim](/programming/applications/vim/index.md)
+  - [Learning Resource](/programming/applications/vim/learning-resource.md)
+  - [VIM Cheatsheet](/programming/applications/vim/vim-cheatsheet.md)
+- [Alacritty](/programming/applications/alacritty.md)
+- [Safari](/programming/applications/safari.md)
+- [ffmpeg](/programming/applications/ffmpeg.md)
+- [Heroku](/programming/applications/heroku/index.md)
+  - [Heroku Tips](/programming/applications/heroku/heroku-tips.md)
+- [iTerm2](/programming/applications/iterm2/index.md)
+  - [iTerm2 Select Text without Mouse](/programming/applications/iterm2/iterm2-select-text-without-mouse.md)
