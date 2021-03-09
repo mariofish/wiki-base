@@ -1,5 +1,5 @@
 # Safari
 
-#### Tamper Monkey Alternative
+## [UserScripts](https://github.com/quoid/userscripts)
 
-UserScripts
+A Tamper Monkey Alternative for Safari.

@@ -1,6 +1,6 @@
 # Display color in Terminal
 
-修改 `~/.bash_profile`，添加：
+`~/.bash_profile`:
 
 ```shell
 export CLICOLOR=1
