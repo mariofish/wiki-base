@@ -25,3 +25,5 @@ e.g.:
 ```go
 t, err := time.Parse("2006-01-02 15:04:05 -0700", input)
 ```
+
+<https://yourbasic.org/golang/format-parse-string-time-date-example/>
