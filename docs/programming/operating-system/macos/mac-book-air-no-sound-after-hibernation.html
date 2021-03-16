@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>mac-book-air-no-sound-after-hibernation</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/wiki-base/css/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site.title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/wiki-base/css/style.css">
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div class="container">
+<h1 id="mac-book-air-合盖子或者休眠后没声音">Mac Book Air 合盖子或者休眠后没声音</h1>
+<p>在安装有 OSX 10.9 Mavericks 的 Mac 中，包括升或者直接购买的 Mac，在合上盖子或者休眠重开后，经常会遇到没有声音的情况。忍了很久后，今天终于找到解决方法：</p>
+<pre class="shell"><code>sudo kextunload /System/Library/Extensions/AppleHDA.kext
+sudo kextload /System/Library/Extensions/AppleHDA.kext</code></pre>
+<p>OSX 升级到 10.10 Yosemite 后，此问题没有再出现过，应该是苹果彻底修复了。</p>
+    <footer>
+      <div>Copyright &copy; David Zhang, 2021.</div>
+    </footer>
+  </body>
+</html>
+</body>
+</html>

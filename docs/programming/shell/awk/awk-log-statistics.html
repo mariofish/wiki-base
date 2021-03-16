@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>awk-log-statistics</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/wiki-base/css/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site.title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/wiki-base/css/style.css">
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div class="container">
+<h1 id="awk-log-stats">awk Log Stats</h1>
+<p>使用 awk 统计日志中各项平均耗时</p>
+<p><strong>基础扫描版</strong></p>
+<p>扫描整个日志，从 Timer 字段开始定位，过滤掉无用的 tbapi 开头的 timer</p>
+<pre class="shell"><code>less ui.log |
+awk &#39;BEGIN{FS=&quot;Timer\\[&quot;}{print $2}&#39; |
+awk &#39;BEGIN{FS=&quot;\\]&quot;}{print $1}&#39; |
+awk &#39;{for(i=1;i&lt;=NF;i++){if($i!~/tbapi/){print $i}}}&#39; |
+awk &#39;BEGIN{FS=&quot;:&quot;}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf(&quot;%.2f\t%d\t%s\n&quot;,s[i]/c[i]/1000,c[i],i);}}&#39; |
+sort -n</code></pre>
+<p><strong>定时刷新版</strong></p>
+<p>每 2s 自动 tail 500 条，原理同上（ps：符号转义好恶心啊）</p>
+<pre class="shell"><code>set +o history
+watch &quot;tail -500 ui.log|awk &#39;BEGIN{FS=\&quot;Timer\\\[\&quot;}{print \$2}&#39;|awk &#39;BEGIN{FS=\&quot;\\\]\&quot;}{print \$1}&#39;|awk &#39;{for(i=1;i&lt;=NF;i++){if(\$i!~/tbapi/){print \$i}}}&#39;|awk &#39;BEGIN{FS=\&quot;:\&quot;}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\&quot;%.2f\t%d\t%s\n\&quot;,s[i]/c[i]/1000,c[i],i);}}&#39;|sort -r -n&quot;</code></pre>
+<h4 id="qps">QPS</h4>
+<pre class="shell"><code>cat ui.log|awk &#39;{print $4}&#39;|uniq -c</code></pre>
+    <footer>
+      <div>Copyright &copy; David Zhang, 2021.</div>
+    </footer>
+  </body>
+</html>
+</body>
+</html>

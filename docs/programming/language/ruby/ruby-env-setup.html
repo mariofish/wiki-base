@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ruby-env-setup</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/wiki-base/css/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site.title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/wiki-base/css/style.css">
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div class="container">
+<h1 id="ruby-env-setup">Ruby Env Setup</h1>
+<h4 id="install-ruby">Install Ruby</h4>
+<pre class="shell"><code>brew install ruby</code></pre>
+<h4 id="install-nokogiri">Install nokogiri</h4>
+<pre class="shell"><code>brew install libxml2
+gem install nokogiri -- --with-xml2-include=/usr/local/Cellar/libxml2/2.9.4/include/libxml2 --use-system-libraries</code></pre>
+<h4 id="gem-remove-all">Gem remove all</h4>
+<pre class="shell"><code>gem uninstall -aIx</code></pre>
+<h4 id="gem-source">Gem Source</h4>
+<pre class="shell"><code>gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+bundle config mirror.https://rubygems.org https://gems.ruby-china.com</code></pre>
+<h4 id="install-libexif">Install libexif</h4>
+<pre class="shell"><code>brew install libexif
+CPATH=$(brew --prefix libexif)/include gem install exif</code></pre>
+    <footer>
+      <div>Copyright &copy; David Zhang, 2021.</div>
+    </footer>
+  </body>
+</html>
+</body>
+</html>

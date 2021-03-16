@@ -1,4 +1,6 @@
-# Table of contents
+# Personal Wiki
+
+## Table of contents
 
 - [Programming](/programming/index.md)
 - [History](/history/index.md)
