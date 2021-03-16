@@ -30,9 +30,11 @@ body {
 }
 
 footer {
+  border-top: 1px solid #aaaaaa;
   text-align: center;
   font-size: 1rem;
   overflow: hidden;
+  padding-top: .8rem;
   margin-top: 2rem;
   margin-bottom: 1.2rem;
 }
@@ -70,70 +72,23 @@ a:hover {
   margin-right: 1rem;
 }
 
-.section {
-  text-align: left;
-  margin-top: 2rem;
-}
-
-.section-wrap {
-  margin-top: .6rem;
-  background-color: #ffffff;
-  box-shadow: 0 .1rem .2rem 0 #ddd;
-  border-radius: 4px;
-  padding: 1rem;
-}
-
-.section-wrap:hover {
-  box-shadow: 0 .1rem .4rem .1rem #ddd;
-}
-
-.section-item {
-  display: flex;
-  line-height: 1.25;
-  overflow: hidden;
-  width: 100%;
-}
-
-.section-item:first-of-type {
-  margin-bottom: 1rem;
-}
-
-.section-title {
-}
-
-.section-content {
-  padding-right: .5rem;
-  width: 37.6rem;
-}
-
-.title-q:before {
-  content: "Q";
-  display: inline-block;
-  width: 1rem;
-  padding-right: .5rem;
-  margin-right: .5rem;
-  border-right: .1rem solid #aaa;
-}
-
-.title-a:before {
-  content: "A";
-  display: inline-block;
-  width: 1rem;
-  padding-right: .5rem;
-  margin-right: .5rem;
-  border-right: .1rem solid #aaa;
-}
-
 /* codes */
 pre {
-  font-size: .85rem;
+  font-size: .8rem;
 }
+
 code {
   font-family: Menlo, Monaco, "Source Code Pro", Consolas, Courier;
   padding-left: .5rem;
   padding-right: .5rem;
-  border: .05rem solid #aaaaaa;
+  border: 1px solid #aaaaaa;
   border-radius: .2rem;
   max-width: 100%;
   overflow: hidden;
+}
+
+blockquote {
+  border-left: 0.2rem solid #aaaaaa;
+  margin-left: 0;
+  padding-left: 1rem;
 }

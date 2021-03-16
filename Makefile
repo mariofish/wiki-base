@@ -3,7 +3,7 @@ MARKDOWN=$(shell find ./docs -iname "*.md")
 # Form all 'html' counterparts
 HTML=$(MARKDOWN:.md=.html)
 
-.PHONY = all cp clean
+.PHONY = init all clean
 
 all: $(HTML)
 
