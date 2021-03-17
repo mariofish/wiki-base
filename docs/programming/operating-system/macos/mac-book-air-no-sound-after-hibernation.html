@@ -27,6 +27,7 @@
 <header id="title-block-header">
 <h1 class="title">Mac Book Air 合盖子或者休眠后没声音</h1>
 </header>
+<p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/operating-system/index.html">operating-system</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/operating-system/macos/index.html">macos</a></span></p>
 <p>在安装有 OSX 10.9 Mavericks 的 Mac 中，包括升或者直接购买的 Mac，在合上盖子或者休眠重开后，经常会遇到没有声音的情况。忍了很久后，今天终于找到解决方法：</p>
 <pre class="shell"><code>sudo kextunload /System/Library/Extensions/AppleHDA.kext
 sudo kextload /System/Library/Extensions/AppleHDA.kext</code></pre>

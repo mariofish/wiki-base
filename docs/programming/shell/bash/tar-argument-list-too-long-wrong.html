@@ -27,6 +27,7 @@
 <header id="title-block-header">
 <h1 class="title">tar: argument list too long wrong</h1>
 </header>
+<p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/shell/index.html">shell</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/shell/bash/index.html">bash</a></span></p>
 <p>也就是说 tar 参数太多了。解决方法是，通过列表文件：</p>
 <pre class="shell"><code>find /path/to/crash_log/20131229 -name &#39;*crash*&#39; -print &gt; /tmp/20131229.list
 tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list

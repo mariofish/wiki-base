@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Snippet: deprecate class method</title>
+  <title>Snippet: Webrick Serve with Path</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -88,17 +88,19 @@
 <body>
 <div class="container">
 <header id="title-block-header">
-<h1 class="title">Snippet: deprecate class method</h1>
+<h1 class="title">Snippet: Webrick Serve with Path</h1>
 </header>
-<p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/index.html">language</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/python/index.html">python</a></span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># coding: utf-8</span></span>
+<p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/index.html">language</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/ruby/index.html">ruby</a></span></p>
+<p>e.g. This wiki is served with the following:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span> <span class="vs">&#39;webrick&#39;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> deprecated_method(replace_func):</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> make_deprecate(func):</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> func_wrapper(<span class="va">self</span>, <span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="bu">getattr</span>(<span class="va">self</span>, replace_func)(<span class="op">*</span>args, <span class="op">**</span>kwargs)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> func_wrapper</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> make_deprecate</span></code></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>server <span class="kw">=</span> <span class="dt">WEBrick</span><span class="kw">::</span><span class="dt">HTTPServer</span><span class="at">.new</span>(<span class="dt">Port</span>: <span class="dv">8000</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>server<span class="at">.mount</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="vs">&#39;/wiki-base&#39;</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">WEBrick</span><span class="kw">::</span><span class="dt">HTTPServlet</span><span class="kw">::</span><span class="dt">FileHandler</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="vs">&#39;./docs&#39;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>server<span class="at">.start</span></span></code></pre></div>
 <footer>
   <div>Copyright &copy; David Zhang, 2021.</div>
   <div>
