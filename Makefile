@@ -3,7 +3,7 @@ MARKDOWN=$(shell find ./docs -iname "*.md")
 # Form all 'html' counterparts
 HTML=$(MARKDOWN:.md=.html)
 
-.PHONY = init all clean
+.PHONY = init all clean serve
 
 all: $(HTML)
 
@@ -23,3 +23,6 @@ init:
 
 clean:
 	rm $(MARKDOWN)
+
+serve:
+	ruby serve.rb
