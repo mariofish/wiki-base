@@ -15,7 +15,8 @@ all: $(HTML)
 		-B ./_build/parts/header.html \
 		-A ./_build/parts/footer.html \
 		--lua-filter=./_build/filters/links-to-html.lua \
-		--lua-filter=./_build/filters/promote-headers.lua
+		--lua-filter=./_build/filters/promote-headers.lua \
+		--lua-filter=./_build/filters/breadcrumb-menu.lua
 
 init:
 	cp -r ./wiki/* ./docs
