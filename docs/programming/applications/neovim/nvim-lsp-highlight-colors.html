@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>nvim-lsp-highlight-colors</title>
+  <title>nvim Lsp Highlight Colors</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -18,13 +18,15 @@
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+  <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
+  <script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
-<script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 <div class="container">
-<h1 id="nvim-lsp-highlight-colors">nvim Lsp Highlight Colors</h1>
+<header id="title-block-header">
+<h1 class="title">nvim Lsp Highlight Colors</h1>
+</header>
 <p>Use Nord-vim as an example:</p>
 <pre class="shell"><code>call s:hi(&quot;LspDiagnosticsDefaultWarning&quot;, s:nord13_gui, &quot;&quot;, s:nord13_term, &quot;&quot;, &quot;&quot;, &quot;&quot;)
 call s:hi(&quot;LspDiagnosticsDefaultError&quot; , s:nord11_gui, &quot;&quot;, s:nord11_term, &quot;&quot;, &quot;&quot;, &quot;&quot;)

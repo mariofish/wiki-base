@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>rails-tips</title>
+  <title>Rails Tips</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -18,14 +18,16 @@
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+  <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
+  <script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
-<script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 <div class="container">
-<h1 id="rails-tips">Rails Tips</h1>
-<h3 id="postgres">Postgres</h3>
+<header id="title-block-header">
+<h1 class="title">Rails Tips</h1>
+</header>
+<h2 id="postgres">Postgres</h2>
 <pre class="shell"><code># run pg
 pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
@@ -38,7 +40,7 @@ CREATE USER postgres SUPERUSER;
 # alter role
 alter role dripcoffee with LOGIN;
 alter role dripcoffee with CREATEDB;</code></pre>
-<h3 id="running-rails">Running Rails</h3>
+<h2 id="running-rails">Running Rails</h2>
 <pre class="shell"><code>RAILS_ENV=production rake assets:precompile
 
 RAILS_ENV=production bin/rails db:migrate

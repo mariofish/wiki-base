@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>vim-cheatsheet</title>
+  <title>VIM Cheatsheet</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -18,26 +18,28 @@
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+  <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
+  <script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
-<script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 <div class="container">
-<h1 id="vim-cheatsheet">VIM Cheatsheet</h1>
-<h2 id="file">File</h2>
+<header id="title-block-header">
+<h1 class="title">VIM Cheatsheet</h1>
+</header>
+<h1 id="file">File</h1>
 <ul>
 <li><code>:e</code> edit</li>
 <li><code>:w</code> write</li>
 <li><code>:q</code> quit</li>
 </ul>
-<h2 id="mode">Mode</h2>
+<h1 id="mode">Mode</h1>
 <ul>
 <li><code>v</code> visual</li>
 <li><code>V</code> visual line</li>
 <li><code>c-v</code> visual block</li>
 </ul>
-<h2 id="editing">Editing</h2>
+<h1 id="editing">Editing</h1>
 <ul>
 <li><code>i</code> insert before</li>
 <li><code>I</code> insert at the head of line</li>
@@ -63,8 +65,8 @@
 <li><code>J</code> remove newline char</li>
 <li><code>.</code> repeat last command</li>
 </ul>
-<h2 id="editing-w-motion">Editing w/ Motion</h2>
-<h3 id="commands">Commands</h3>
+<h1 id="editing-w-motion">Editing w/ Motion</h1>
+<h2 id="commands">Commands</h2>
 <ul>
 <li><code>c</code> correct</li>
 <li><code>d</code> delete</li>
@@ -72,13 +74,13 @@
 <li><code>gu</code> to lower</li>
 <li><code>gU</code> to upper</li>
 </ul>
-<h3 id="preposition">Preposition</h3>
+<h2 id="preposition">Preposition</h2>
 <ul>
 <li><code>i</code> inner</li>
 <li><code>a</code> “a”</li>
 <li><code>t</code> till</li>
 </ul>
-<h3 id="objects">Objects</h3>
+<h2 id="objects">Objects</h2>
 <ul>
 <li><code>w</code> word</li>
 <li><code>s</code> sentence</li>
@@ -89,14 +91,14 @@
 <li><code>B</code> “{“block</li>
 <li><code>&lt;</code> <code>&gt;</code> <code>”</code> <code>'</code></li>
 </ul>
-<h3 id="shortcuts">Shortcuts</h3>
+<h2 id="shortcuts">Shortcuts</h2>
 <ul>
 <li><code>cc</code></li>
 <li><code>dd</code></li>
 <li><code>C</code></li>
 <li><code>D</code></li>
 </ul>
-<h2 id="editing-1">Editing</h2>
+<h1 id="editing-1">Editing</h1>
 <ul>
 <li><code>c-a</code> last inserted text</li>
 <li><code>c-n</code> next word</li>
@@ -109,7 +111,7 @@
 <li><code>c-u</code> erase line</li>
 <li><code>c-w</code> erase word</li>
 </ul>
-<h2 id="moving">Moving</h2>
+<h1 id="moving">Moving</h1>
 <ul>
 <li><code>h</code> left</li>
 <li><code>j</code> down</li>
@@ -127,7 +129,7 @@
 <li><code>%</code></li>
 <li><code>fx</code></li>
 </ul>
-<h2 id="scrolling">Scrolling</h2>
+<h1 id="scrolling">Scrolling</h1>
 <ul>
 <li><code>z.</code> cursor move as center</li>
 <li><code>zt</code> cursor move as top</li>
@@ -137,7 +139,7 @@
 <li><code>c-y</code> scroll up one page</li>
 <li><code>c-e</code> scroll down one line</li>
 </ul>
-<h2 id="searchingreplacing">Searching/Replacing</h2>
+<h1 id="searchingreplacing">Searching/Replacing</h1>
 <ul>
 <li><code>#</code> search currenct word</li>
 <li><code>/</code> search input word</li>
@@ -147,7 +149,7 @@
 <li><code>%/s/src/dst/g</code> replace all “src” with “dst”</li>
 <li><code>%/s/src/dst/c</code> replace “src” with “dst”, with confirmation</li>
 </ul>
-<h2 id="tabswindows">Tabs/Windows</h2>
+<h1 id="tabswindows">Tabs/Windows</h1>
 <ul>
 <li><code>split</code> <code>vsplit</code></li>
 <li><code>c-w r</code> swap window</li>
@@ -156,7 +158,7 @@
 <li><code>gt</code> next tab</li>
 <li><code>gT</code> previous tab</li>
 </ul>
-<h2 id="tricks">Tricks</h2>
+<h1 id="tricks">Tricks</h1>
 <ul>
 <li><code>g C-g</code> count words</li>
 <li><code>%s/\s\+$//</code> remove trailing spaces</li>
@@ -168,19 +170,19 @@
 <li><code>ESC</code></li>
 </ul></li>
 </ul>
-<h2 id="shell">Shell</h2>
+<h1 id="shell">Shell</h1>
 <ul>
 <li><code>!sh echo $PATH</code> execute shell</li>
 <li><code>read /path/to/file</code> read a file</li>
 <li><code>read !date</code> read a date</li>
 <li><code>read !date +\%s</code> read a timestamp</li>
 </ul>
-<h2 id="session">Session</h2>
+<h1 id="session">Session</h1>
 <ul>
 <li><code>mksession! /path/to/session.vim</code> make session</li>
 <li><code>vim -S /path/to/session.vim</code> start with session</li>
 </ul>
-<h2 id="references">References</h2>
+<h1 id="references">References</h1>
 <ul>
 <li><a href="/wiki-basehttps://www.fprintf.net/vimCheatSheet.html">https://www.fprintf.net/vimCheatSheet.html</a></li>
 <li><a href="/wiki-basehttp://vimdoc.sourceforge.net/htmldoc/motion.html">http://vimdoc.sourceforge.net/htmldoc/motion.html</a></li>

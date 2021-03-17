@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>arch-linux-guide</title>
+  <title>Arch Linux Guide</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -18,41 +18,43 @@
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+  <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
+  <script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
-<script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 <div class="container">
-<h1 id="arch-linux-guide">Arch Linux Guide</h1>
-<h3 id="installation">Installation</h3>
+<header id="title-block-header">
+<h1 class="title">Arch Linux Guide</h1>
+</header>
+<h2 id="installation">Installation</h2>
 <ul>
 <li>ISO Image <a href="/wiki-basehttps://linoxide.com/linux-how-to/create-bootable-arch-linux-usb-drive/">How to Create Bootable Arch Linux on USB Drive</a></li>
 <li><a href="/wiki-basehttps://itsfoss.com/install-arch-linux/">How to Install Arch Linux in 2019 Step by Step Guide</a></li>
 <li><span class="citation" data-cites="mudrii/arch-linux-installation-on-hw-with-i3-windows-manager-part-1-5ef9751a0be">[https://medium.com/@mudrii/arch-linux-installation-on-hw-with-i3-windows-manager-part-1-5ef9751a0be]</span>(https://medium.com/<span class="citation" data-cites="mudrii/arch-linux-installation-on-hw-with-i3-windows-manager-part-1-5ef9751a0be">@mudrii/arch-linux-installation-on-hw-with-i3-windows-manager-part-1-5ef9751a0be</span>)</li>
 <li><a href="/wiki-basehttps://www.itzgeek.com/how-tos/linux/arch-linux/how-to-install-arch-linux-latest-version-step-by-step-guide.html">https://www.itzgeek.com/how-tos/linux/arch-linux/how-to-install-arch-linux-latest-version-step-by-step-guide.html</a></li>
 </ul>
-<h3 id="bootloader">Bootloader</h3>
+<h2 id="bootloader">Bootloader</h2>
 <ul>
 <li><a href="/wiki-basehttps://wiki.archlinux.org/index.php/Microcode">https://wiki.archlinux.org/index.php/Microcode</a></li>
 <li><a href="/wiki-basehttps://wiki.archlinux.org/index.php/Persistent_block_device_naming#by-partuuid">https://wiki.archlinux.org/index.php/Persistent_block_device_naming#by-partuuid</a></li>
 <li><a href="/wiki-basehttps://www.reddit.com/r/archlinux/comments/a81kz6/need_help_installing_refind_bootloader/">https://www.reddit.com/r/archlinux/comments/a81kz6/need_help_installing_refind_bootloader/</a></li>
 <li><a href="/wiki-basehttps://bbs.archlinux.org/viewtopic.php?id=152832">https://bbs.archlinux.org/viewtopic.php?id=152832</a></li>
 </ul>
-<h3 id="rice">Rice</h3>
+<h2 id="rice">Rice</h2>
 <ul>
 <li><a href="/wiki-basehttps://github.com/EliverLara/Juno">GitHub - EliverLara/Juno: GTK themes inspired by epic vscode themes</a></li>
 </ul>
-<h3 id="faq">FAQ</h3>
-<h4 id="wi-fi">Wi-Fi</h4>
+<h2 id="faq">FAQ</h2>
+<h3 id="wi-fi">Wi-Fi</h3>
 <p><a href="/wiki-basehttps://ricostacruz.com/til/arch-linux-wifi-using-netctl">https://ricostacruz.com/til/arch-linux-wifi-using-netctl</a></p>
 <pre class="shell"><code>sudo netctl start wlp3s0-Yeyeko\&amp;Crisp_5G
 sudo systemctl enable netctl-auto@wlp3s0.service</code></pre>
-<h4 id="sound">Sound</h4>
+<h3 id="sound">Sound</h3>
 <pre class="shell"><code>aplay -l
 speaker-test -c1
 vim ~/.asoundrc</code></pre>
-<h4 id="change-hdd">Change HDD</h4>
+<h3 id="change-hdd">Change HDD</h3>
 <pre class="shell"><code># mount &amp;&amp; swapon
 mount /dev/sda3 /mnt # replace with nvmen1p3 and etc.
 swapon /dev/sda2

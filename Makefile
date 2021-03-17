@@ -9,10 +9,13 @@ all: $(HTML)
 
 %.html: %.md
 	pandoc --from markdown --to html $< -o $@ \
-		--lua-filter=./_build/filter/links-to-html.lua \
-		-s -c /wiki-base/css/style.css \
+		--standalone \
+		-c /wiki-base/css/style.css \
+		-H ./_build/parts/head.html \
 		-B ./_build/parts/header.html \
-		-A ./_build/parts/footer.html
+		-A ./_build/parts/footer.html \
+		--lua-filter=./_build/filters/links-to-html.lua \
+		--lua-filter=./_build/filters/promote-headers.lua
 
 init:
 	cp -r ./wiki/* ./docs

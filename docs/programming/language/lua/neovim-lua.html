@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>neovim-lua</title>
+  <title>Neovim Lua</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -81,24 +81,26 @@
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+  <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
+  <script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
-<script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 <div class="container">
-<h1 id="neovim-lua">Neovim Lua</h1>
-<h2 id="neovim-api">Neovim API</h2>
+<header id="title-block-header">
+<h1 class="title">Neovim Lua</h1>
+</header>
+<h1 id="neovim-api">Neovim API</h1>
 <ul>
 <li>nvim_echo</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vim<span class="op">.</span>api<span class="op">.</span>nvim_echo<span class="op">({{</span><span class="st">&#39;hello&#39;</span><span class="op">,</span> <span class="st">&#39;healthError&#39;</span><span class="op">},</span> <span class="op">{</span><span class="st">&#39;world&#39;</span><span class="op">}},</span> <span class="kw">true</span><span class="op">,</span> <span class="op">{})</span></span></code></pre></div>
-<h2 id="system">System</h2>
+<h1 id="system">System</h1>
 <ul>
 <li>current working directory</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> cwd <span class="op">=</span> vim<span class="op">.</span>fn<span class="op">.</span>expand<span class="op">(</span><span class="st">&#39;%:p:h&#39;</span><span class="op">)</span></span></code></pre></div>
-<h2 id="buffer">Buffer</h2>
+<h1 id="buffer">Buffer</h1>
 <ul>
 <li>get current buf path</li>
 </ul>
@@ -107,11 +109,11 @@
 <li>get lines</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> line <span class="op">=</span> vim<span class="op">.</span>api<span class="op">.</span>nvim_buf_get_lines<span class="op">(</span>bufnr<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="op">-</span><span class="dv">1</span><span class="op">,</span> <span class="kw">false</span><span class="op">)</span></span></code></pre></div>
-<h2 id="window">Window</h2>
+<h1 id="window">Window</h1>
 <div class="sourceCode" id="cb5"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- 0 is current window</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>vim<span class="op">.</span>fn<span class="op">.</span>winwidth<span class="op">(</span><span class="dv">0</span><span class="op">)</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>vim<span class="op">.</span>fn<span class="op">.</span>winheight<span class="op">(</span><span class="dv">0</span><span class="op">)</span></span></code></pre></div>
-<h2 id="metatable-tricks">Metatable Tricks</h2>
+<h1 id="metatable-tricks">Metatable Tricks</h1>
 <ul>
 <li>require automatically by access module property</li>
 </ul>
