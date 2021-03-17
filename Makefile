@@ -11,9 +11,7 @@ all: $(HTML)
 	pandoc --from markdown --to html $< -o $@ \
 		--standalone \
 		-c /wiki-base/css/style.css \
-		-H ./_build/parts/head.html \
-		-B ./_build/parts/header.html \
-		-A ./_build/parts/footer.html \
+		--template=./_build/template.html \
 		--lua-filter=./_build/filters/links-to-html.lua \
 		--lua-filter=./_build/filters/promote-headers.lua \
 		--lua-filter=./_build/filters/breadcrumb-menu.lua
