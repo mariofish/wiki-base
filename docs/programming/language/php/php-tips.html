@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="description" content="Based on PHP 5.2/5.4" />
   <title>PHP Tips</title>
   <style>
     code{white-space: pre-wrap;}
@@ -29,16 +28,19 @@
 <h1 class="title">PHP Tips</h1>
 </header>
 <p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/index.html">language</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/php/index.html">php</a></span></p>
-<h3 id="array_merge"><code>array_merge</code></h3>
+<blockquote>
+<p>Based on PHP 5.2/5.4</p>
+</blockquote>
+<h2 id="array_merge"><code>array_merge</code></h2>
 <ul>
 <li><code>array_merge</code> 后一个数组不能是 null</li>
 </ul>
-<h3 id="in_array"><code>in_array</code></h3>
+<h2 id="in_array"><code>in_array</code></h2>
 <ul>
 <li><code>in_array</code> 要 o(n)</li>
 <li><code>isset</code> 是 hash 只要 o(1)</li>
 </ul>
-<h3 id="foreachfor"><code>foreach</code>/<code>for</code></h3>
+<h2 id="foreachfor"><code>foreach</code>/<code>for</code></h2>
 <ul>
 <li><code>foreach</code> 最快，<code>foreach</code> 尽量不要用引用</li>
 <li><code>for</code> 后面的条件，如果是表达式，会每次都执行，因此较慢
@@ -46,17 +48,17 @@
 <li>如果能把条件的表达式值先算出来，再 <code>for</code>，效率较高</li>
 </ul></li>
 </ul>
-<h3 id="json-vs-serialization">JSON vs Serialization</h3>
+<h2 id="json-vs-serialization">JSON vs Serialization</h2>
 <ul>
 <li><code>json_encode</code> <code>json_decode</code> 比 <code>serialize</code> <code>unserialize</code> 快太多了！</li>
 <li><code>serialize</code> 可以带对象，而 JSON 不能，其他 JSON 完爆</li>
 <li>JSON 中文部分 UTF-8，序列化可以不是</li>
 </ul>
-<h3 id="array-hashtable"><code>array</code> (hashtable)</h3>
+<h2 id="array-hashtable"><code>array</code> (hashtable)</h2>
 <ul>
 <li>php 存储的数组都是 <code>hashtable</code> 满了才扩容 按照 2 的次方数扩容</li>
 </ul>
-<h3 id="class">class</h3>
+<h2 id="class">class</h2>
 <ul>
 <li>任何两个 php 类之间都可以理解为是 friend</li>
 </ul>

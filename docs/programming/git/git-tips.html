@@ -28,13 +28,13 @@
 <h1 class="title">Git Tips</h1>
 </header>
 <p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/git/index.html">git</a></span></p>
-<h3 id="log">Log</h3>
+<h2 id="log">Log</h2>
 <pre class="shell"><code>git log
 git log --abbrev-commit
 git log --graph
 git shortlog
 git reflog</code></pre>
-<h3 id="branch">Branch</h3>
+<h2 id="branch">Branch</h2>
 <pre class="shell"><code># create a new branch
 git checkout -b branch-name
 # equivalent to
@@ -46,23 +46,23 @@ git checkout branch-name
 git checkout -
 # create an orphan branch
 git checkout -b --orphan branch-name</code></pre>
-<h3 id="git-get-current-working-branch">Git Get Current Working Branch</h3>
+<h2 id="git-get-current-working-branch">Git Get Current Working Branch</h2>
 <pre class="shell"><code>git rev-parse --abbrev-ref HEAD</code></pre>
-<h3 id="git-sync-forks">Git Sync Forks</h3>
+<h2 id="git-sync-forks">Git Sync Forks</h2>
 <pre class="shell"><code>git remote add upstream &lt;ORIGINAL&gt;
 git fetch upstream
 git merge upstream/master</code></pre>
-<h3 id="git-clone-with-usernamepassword">Git Clone with Username/Password</h3>
+<h2 id="git-clone-with-usernamepassword">Git Clone with Username/Password</h2>
 <pre class="shell"><code>git clone https://username:password@remote</code></pre>
-<h3 id="forked-repo-is-ahead-of-master">Forked repo is ahead of master</h3>
+<h2 id="forked-repo-is-ahead-of-master">Forked repo is ahead of master</h2>
 <pre class="shell"><code>git checkout master
 git reset --hard upstream/master
 git push --force</code></pre>
-<h3 id="delete-file-and-its-history">Delete file and its history</h3>
+<h2 id="delete-file-and-its-history">Delete file and its history</h2>
 <pre class="shell"><code>git filter-branch --force --index-filter \
 &#39;git rm --cached --ignore-unmatch /path/to/data&#39; \
 --prune-empty --tag-name-filter cat -- --all</code></pre>
-<h3 id="modify-commit">Modify Commit</h3>
+<h2 id="modify-commit">Modify Commit</h2>
 <pre class="shell"><code>git commit --amend
 # Reset commit author
 git commit --amend --reset-author
@@ -70,16 +70,16 @@ git commit --amend --reset-author
 # Rebase
 git rebase -i HEAD~n
 git push --force</code></pre>
-<h3 id="set-remote">Set Remote</h3>
+<h2 id="set-remote">Set Remote</h2>
 <pre class="shell"><code># Set origin (fetch)
 git remote set-url [url]
 # Set origin (push)
 git remote set-url --push [url]</code></pre>
-<h3 id="clean-untracked-files">Clean untracked files</h3>
+<h2 id="clean-untracked-files">Clean untracked files</h2>
 <pre class="shell"><code>git clean -f -d</code></pre>
-<h3 id="restore-a-deleted-file">Restore a deleted file</h3>
+<h2 id="restore-a-deleted-file">Restore a deleted file</h2>
 <pre class="shell"><code>git checkout HEAD^ /path/to/file</code></pre>
-<h3 id="reset">Reset</h3>
+<h2 id="reset">Reset</h2>
 <ol type="1">
 <li>Reset HEAD to commit hash (stop here with <code>--soft</code>)</li>
 <li>Make INDEX the same as HEAD (stop here unless <code>--hard</code>)</li>
@@ -103,16 +103,16 @@ git checkout .</code></pre>
 <li><p>Difference between HEAD^ and HEAD~</p>
 <p><a href="/wiki-basehttp://www.paulboxley.com/blog/2011/06/git-caret-and-tilde">http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde</a></p></li>
 </ul>
-<h3 id="stash">Stash</h3>
+<h2 id="stash">Stash</h2>
 <pre class="shell"><code>git stash
 git stash apply
 git stash drop
 git stash pop # like apply and then drop
 git stash list</code></pre>
-<h3 id="add-part-of-file">Add Part of File</h3>
+<h2 id="add-part-of-file">Add Part of File</h2>
 <pre class="shell"><code>gid add --patch /path/to/file
 # Then select the hunks</code></pre>
-<h3 id="revert-a-merge">Revert a merge</h3>
+<h2 id="revert-a-merge">Revert a merge</h2>
 <pre class="shell"><code>git revert -m 1 &lt;merge-commit-hash&gt;</code></pre>
 <footer>
   <div>Copyright &copy; David Zhang, 2021.</div>

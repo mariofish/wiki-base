@@ -29,7 +29,7 @@
 </header>
 <p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/shell/index.html">shell</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/shell/awk/index.html">awk</a></span></p>
 <p>使用 awk 统计日志中各项平均耗时</p>
-<p><strong>基础扫描版</strong></p>
+<h2 id="基础扫描版">基础扫描版</h2>
 <p>扫描整个日志，从 Timer 字段开始定位，过滤掉无用的 tbapi 开头的 timer</p>
 <pre class="shell"><code>less ui.log |
 awk &#39;BEGIN{FS=&quot;Timer\\[&quot;}{print $2}&#39; |
@@ -37,11 +37,11 @@ awk &#39;BEGIN{FS=&quot;\\]&quot;}{print $1}&#39; |
 awk &#39;{for(i=1;i&lt;=NF;i++){if($i!~/tbapi/){print $i}}}&#39; |
 awk &#39;BEGIN{FS=&quot;:&quot;}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf(&quot;%.2f\t%d\t%s\n&quot;,s[i]/c[i]/1000,c[i],i);}}&#39; |
 sort -n</code></pre>
-<p><strong>定时刷新版</strong></p>
+<h2 id="定时刷新版">定时刷新版</h2>
 <p>每 2s 自动 tail 500 条，原理同上（ps：符号转义好恶心啊）</p>
 <pre class="shell"><code>set +o history
 watch &quot;tail -500 ui.log|awk &#39;BEGIN{FS=\&quot;Timer\\\[\&quot;}{print \$2}&#39;|awk &#39;BEGIN{FS=\&quot;\\\]\&quot;}{print \$1}&#39;|awk &#39;{for(i=1;i&lt;=NF;i++){if(\$i!~/tbapi/){print \$i}}}&#39;|awk &#39;BEGIN{FS=\&quot;:\&quot;}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\&quot;%.2f\t%d\t%s\n\&quot;,s[i]/c[i]/1000,c[i],i);}}&#39;|sort -r -n&quot;</code></pre>
-<h3 id="qps">QPS</h3>
+<h2 id="qps">QPS</h2>
 <pre class="shell"><code>cat ui.log|awk &#39;{print $4}&#39;|uniq -c</code></pre>
 <footer>
   <div>Copyright &copy; David Zhang, 2021.</div>
