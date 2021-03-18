@@ -44,7 +44,6 @@
 <li><code>u</code> undo</li>
 <li><code>U</code> undo all</li>
 <li><code>c-r</code> redo</li>
-<li><code>ga</code> ASCII code</li>
 <li><code>~</code> switch case</li>
 <li><code>c-a</code> add number</li>
 <li><code>c-x</code> subtract number</li>
@@ -82,10 +81,10 @@
 </ul>
 <h2 id="shortcuts">Shortcuts</h2>
 <ul>
-<li><code>cc</code></li>
-<li><code>dd</code></li>
-<li><code>C</code></li>
-<li><code>D</code></li>
+<li><code>cc</code> correct line</li>
+<li><code>dd</code> delete line</li>
+<li><code>C</code> correct all after cursor</li>
+<li><code>D</code> delete all after cursor</li>
 </ul>
 <h1 id="editing-1">Editing</h1>
 <ul>
@@ -116,7 +115,10 @@
 <li><code>gg</code></li>
 <li><code>G</code></li>
 <li><code>%</code></li>
-<li><code>fx</code></li>
+<li><code>fx</code> <code>Fx</code></li>
+<li><code>tx</code> <code>Tx</code></li>
+<li><code>[</code> <code>]</code></li>
+<li><code>{</code> <code>}</code></li>
 </ul>
 <h1 id="scrolling">Scrolling</h1>
 <ul>
@@ -138,6 +140,11 @@
 <li><code>%/s/src/dst/g</code> replace all “src” with “dst”</li>
 <li><code>%/s/src/dst/c</code> replace “src” with “dst”, with confirmation</li>
 </ul>
+<h1 id="buffers">Buffers</h1>
+<ul>
+<li><code>bdelete</code></li>
+<li><code>bNext</code> <code>bprevious</code></li>
+</ul>
 <h1 id="tabswindows">Tabs/Windows</h1>
 <ul>
 <li><code>split</code> <code>vsplit</code></li>
@@ -147,9 +154,30 @@
 <li><code>gt</code> next tab</li>
 <li><code>gT</code> previous tab</li>
 </ul>
-<h1 id="tricks">Tricks</h1>
+<h1 id="quickfixlocation">Quickfix/Location</h1>
+<ul>
+<li><code>copen</code> <code>lopen</code></li>
+<li><code>cNext</code> <code>cprevious</code></li>
+<li><code>cclose</code></li>
+</ul>
+<h1 id="macro">Macro</h1>
+<ul>
+<li><code>qa</code> record “a” macro</li>
+<li><code>@a</code> execute “a” macro</li>
+</ul>
+<h1 id="g-commands"><code>g</code> Commands</h1>
 <ul>
 <li><code>g C-g</code> count words</li>
+<li><code>ga</code> ASCII code</li>
+<li><code>g8</code> print hex value in UTF-8</li>
+<li><code>g?</code> Rot13 encoding</li>
+<li><code>gd</code> <code>gD</code> go to definition</li>
+<li><code>gm</code> go to middle of screen line</li>
+<li><code>gM</code> go to middle of text line</li>
+<li><code>gs</code> go to sleep</li>
+</ul>
+<h1 id="tricks">Tricks</h1>
+<ul>
 <li><code>%s/\s\+$//</code> remove trailing spaces</li>
 <li>Add comment to multiple lines:
 <ul>

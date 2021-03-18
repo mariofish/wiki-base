@@ -28,7 +28,6 @@
 - `u` undo
 - `U` undo all
 - `c-r` redo
-- `ga` ASCII code
 - `~` switch case
 - `c-a` add number
 - `c-x` subtract number
@@ -67,10 +66,10 @@
 
 ### Shortcuts
 
-- `cc`
-- `dd`
-- `C`
-- `D`
+- `cc` correct line
+- `dd` delete line
+- `C` correct all after cursor
+- `D` delete all after cursor
 
 ## Editing
 
@@ -101,7 +100,10 @@
 - `gg`
 - `G`
 - `%`
-- `fx`
+- `fx` `Fx`
+- `tx` `Tx`
+- `[` `]`
+- `{` `}`
 
 ## Scrolling
 
@@ -123,6 +125,11 @@
 - `%/s/src/dst/g` replace all “src” with “dst”
 - `%/s/src/dst/c` replace “src” with “dst”, with confirmation
 
+## Buffers
+
+- `bdelete`
+- `bNext` `bprevious`
+
 ## Tabs/Windows
 
 - `split` `vsplit`
@@ -132,9 +139,30 @@
 - `gt` next tab
 - `gT` previous tab
 
-## Tricks
+## Quickfix/Location
+
+- `copen` `lopen`
+- `cNext` `cprevious`
+- `cclose`
+
+## Macro
+
+- `qa` record "a" macro
+- `@a` execute "a" macro
+
+## `g` Commands
 
 - `g C-g` count words
+- `ga` ASCII code
+- `g8` print hex value in UTF-8
+- `g?` Rot13 encoding
+- `gd` `gD` go to definition
+- `gm` go to middle of screen line
+- `gM` go to middle of text line
+- `gs` go to sleep
+
+## Tricks
+
 - `%s/\s\+$//` remove trailing spaces
 - Add comment to multiple lines:
   - Select with `c-v`
