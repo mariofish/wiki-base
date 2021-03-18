@@ -90,18 +90,19 @@
 - `j` down
 - `k` up
 - `l` right
-- `w` word
-- `b`
-- `e`
-- `ge`
-- `gE`
-- `^`
-- `$`
-- `gg`
-- `G`
-- `%`
-- `fx` `Fx`
-- `tx` `Tx`
+- `w` word forward
+- `b` word backward
+- `e` forward to the end of word
+- `ge` backward to the end of word
+- `gE` backward to the end of WORD
+- `0` first character of the line
+- `^` first non-blank character of the line
+- `$` last character of the line
+- `gg` top of file
+- `G` end of file
+- `%` go to matched parentheses
+- `fx` `Fx` find next x
+- `tx` `Tx` find till next x
 - `[` `]`
 - `{` `}`
 

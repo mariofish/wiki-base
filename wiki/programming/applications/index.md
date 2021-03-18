@@ -6,6 +6,7 @@
 - [vim](/programming/applications/vim/index.md)
   - [Learning Resource](/programming/applications/vim/learning-resource.md)
   - [VIM Cheatsheet](/programming/applications/vim/vim-cheatsheet.md)
+  - [vim: how to write `doc.txt`](/programming/applications/vim-doc.md)
 - [Alacritty](/programming/applications/alacritty.md)
 - [Safari](/programming/applications/safari.md)
 - [ffmpeg](/programming/applications/ffmpeg.md)
