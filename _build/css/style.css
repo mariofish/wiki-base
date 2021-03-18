@@ -19,7 +19,8 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Arial, 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -34,7 +35,7 @@ footer {
   text-align: center;
   font-size: 1rem;
   overflow: hidden;
-  padding-top: .8rem;
+  padding-top: 0.8rem;
   margin-top: 2rem;
   margin-bottom: 1.2rem;
 }
@@ -58,20 +59,45 @@ a:hover {
 
 @media (max-width: 42rem) {
   .container {
-    padding-left: .4rem;
-    padding-right: .4rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
   }
 }
 
-h1 { font-size: 2.4rem; font-weight: 400; padding-top: 1.6rem; text-align: left; }
+h1 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  padding-top: 1.6rem;
+  text-align: left;
+}
 
-h2 { font-size: 2rem; font-weight: 400; padding-top: 1.4rem; text-align: left; }
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding-top: 1.4rem;
+  text-align: left;
+}
 
-h3 { font-size: 1.5rem; font-weight: 500; padding-top: 1.2rem; text-align: left; }
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-top: 1.2rem;
+  text-align: left;
+}
 
-h4 { font-size: 1.2rem; font-weight: 600; padding-top: .8rem; text-align: left; }
+h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-top: 0.8rem;
+  text-align: left;
+}
 
-h5 { font-size: 1rem; font-weight: 700; padding-top: .8rem; text-align: left; }
+h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-top: 0.8rem;
+  text-align: left;
+}
 
 blockquote {
   border-left: 0.2rem solid #aaaaaa;
@@ -79,23 +105,59 @@ blockquote {
   padding-left: 1rem;
 }
 
-p { -moz-hyphens: auto; -webkit-hyphens: auto; hyphens: auto; line-height: 1.8rem; margin-top: 1.5rem; }
+p {
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  line-height: 1.8rem;
+  margin-top: 1.5rem;
+}
 
-sup { font-size: .6rem; line-height: .6rem; vertical-align: auto; }
+sup {
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  vertical-align: auto;
+}
 
-hr { border-top: 1px solid #aaaaaa; margin-bottom: 3rem; margin-top: 3rem; width: 30%; }
+hr {
+  border-top: 1px solid #aaaaaa;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  width: 30%;
+}
 
-ul p, ol p { margin: 0; }
+ul p,
+ol p {
+  margin: 0;
+}
 
-ul li, ol li { line-height: 1.8rem; margin-left: -1rem; }
+ul li,
+ol li {
+  line-height: 1.8rem;
+  margin-left: -1rem;
+}
 
-ul li p, ol li p { line-height: 1.8rem; margin: 0; }
+ul li p,
+ol li p {
+  line-height: 1.8rem;
+  margin: 0;
+}
 
-pre, code { font-family: "Fira Mono", Menlo, Monaco, Consolas, Courier, monospace; hyphens: none; }
+pre,
+code {
+  font-family: 'Fira Mono', Menlo, Monaco, Consolas, Courier, monospace;
+  hyphens: none;
+}
 
-pre.highlight { border: 1px solid #aaaaaa; border-radius: 4px; font-size: .9rem; }
+code {
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  font-size: 90%;
+  font-weight: bold;
+  padding: 0.1rem 0.3rem;
+}
 
-code.hljs { padding: .8rem; }
-
-code.highlighter-rouge { border: 1px solid #aaaaaa; border-radius: 4px; font-size: .9rem; font-weight: bold; padding: .1rem .3rem; }
-
+code.hljs {
+  font-size: 1rem;
+  padding: 0.8rem;
+}
