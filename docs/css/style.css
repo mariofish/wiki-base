@@ -65,23 +65,23 @@ a:hover {
 }
 
 h1 {
-  font-size: 2.4rem;
-  font-weight: 400;
-  padding-top: 1.6rem;
-  text-align: left;
-}
-
-h2 {
   font-size: 2rem;
   font-weight: 400;
   padding-top: 1.4rem;
   text-align: left;
 }
 
-h3 {
-  font-size: 1.5rem;
-  font-weight: 500;
+h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
   padding-top: 1.2rem;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-top: 1rem;
   text-align: left;
 }
 
@@ -158,6 +158,6 @@ code {
 }
 
 code.hljs {
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 0.8rem;
 }
