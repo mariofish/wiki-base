@@ -102,6 +102,11 @@ git stash list</code></pre>
 # Then select the hunks</code></pre>
 <h2 id="revert-a-merge">Revert a merge</h2>
 <pre class="shell"><code>git revert -m 1 &lt;merge-commit-hash&gt;</code></pre>
+<h2 id="tag">Tag</h2>
+<pre class="shell"><code>git tag tag-name
+git push origin tag-name
+git tag -d tag-name
+git push --delete origin tag-name</code></pre>
       <footer>
         <div>Copyright &copy; David Zhang, 2021.</div>
         <div>

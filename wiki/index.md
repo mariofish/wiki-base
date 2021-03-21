@@ -3,6 +3,7 @@
 ## Table of contents
 
 - [Programming](/programming/index.md)
+- [Idols](/idols/index.md)
 - [History](/history/index.md)
 - [Sports](/sports/index.md)
 - [Language](/language/index.md)

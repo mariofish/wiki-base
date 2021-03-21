@@ -144,3 +144,12 @@ gid add --patch /path/to/file
 ```shell
 git revert -m 1 <merge-commit-hash>
 ```
+
+### Tag
+
+```shell
+git tag tag-name
+git push origin tag-name
+git tag -d tag-name
+git push --delete origin tag-name
+```
