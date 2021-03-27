@@ -3,14 +3,16 @@ on: push
 jobs:
   publish:
     name: run
-    runs-on: ubuntu-latest
-    container:
-      image: docker://pandoc/core:2.9
-      options: --entrypoint=sh
+    runs-on: macos-11.0
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
+      - name: 'Setup'
+        run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          brew install pandoc
+          pandoc -v
       - name: 'Build'
         run: |
           make init
