@@ -1,5 +1,5 @@
 # Find all markdown files
-MARKDOWN=$(shell find ./docs -iname "*.md")
+MARKDOWN=$(shell find ./gh-pages -iname "*.md")
 # Form all 'html' counterparts
 HTML=$(MARKDOWN:.md=.html)
 
@@ -17,8 +17,8 @@ all: $(HTML)
 		--lua-filter=./_build/filters/breadcrumb-menu.lua
 
 init:
-	cp -r ./wiki/* ./docs
-	cp -r ./_build/css ./docs
+	cp -r ./wiki/* ./gh-pages
+	cp -r ./_build/css ./gh-pages
 
 clean:
 	rm $(MARKDOWN)
