@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>VIM Cheatsheet</title>
+    <link rel="stylesheet" href="/wiki-base/css/style.css" />
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div class="container">
+      <header id="title-block-header">
+        <h1 class="title">VIM Cheatsheet</h1>
+      </header>
+<p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/gh-pages/index.html">gh-pages</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/gh-pages/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/gh-pages/programming/applications/index.html">applications</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/gh-pages/programming/applications/vim/index.html">vim</a></span></p>
+<h1 id="file">File</h1>
+<ul>
+<li><code>:e</code> edit</li>
+<li><code>:w</code> write</li>
+<li><code>:q</code> quit</li>
+</ul>
+<h1 id="mode">Mode</h1>
+<ul>
+<li><code>v</code> visual</li>
+<li><code>V</code> visual line</li>
+<li><code>c-v</code> visual block</li>
+</ul>
+<h1 id="editing">Editing</h1>
+<ul>
+<li><code>i</code> insert before</li>
+<li><code>I</code> insert at the head of line</li>
+<li><code>gi</code> insert to last editing place</li>
+<li><code>gI</code> insert in column 1</li>
+<li><code>a</code> insert after</li>
+<li><code>A</code> insert at the end of line</li>
+<li><code>o</code> insert next line</li>
+<li><code>O</code> insert previous line</li>
+<li><code>r</code> replace</li>
+<li><code>x</code> erase</li>
+<li><code>s</code> erase and enter “i” mode</li>
+<li><code>u</code> undo</li>
+<li><code>U</code> undo all</li>
+<li><code>c-r</code> redo</li>
+<li><code>~</code> switch case</li>
+<li><code>c-a</code> add number</li>
+<li><code>c-x</code> subtract number</li>
+<li><code>&lt;</code> left indent</li>
+<li><code>&gt;</code> right indent</li>
+<li><code>=</code> syntax indent</li>
+<li><code>J</code> remove newline char</li>
+<li><code>.</code> repeat last command</li>
+</ul>
+<h1 id="editing-w-motion">Editing w/ Motion</h1>
+<h2 id="commands">Commands</h2>
+<ul>
+<li><code>c</code> correct</li>
+<li><code>d</code> delete</li>
+<li><code>y</code> yank (copy)</li>
+<li><code>gu</code> to lower</li>
+<li><code>gU</code> to upper</li>
+</ul>
+<h2 id="preposition">Preposition</h2>
+<ul>
+<li><code>i</code> inner</li>
+<li><code>a</code> “a”</li>
+<li><code>t</code> till</li>
+</ul>
+<h2 id="objects">Objects</h2>
+<ul>
+<li><code>w</code> word</li>
+<li><code>s</code> sentence</li>
+<li><code>p</code> paragraph</li>
+<li><code>t</code> tag block</li>
+<li><code>[</code> <code>(</code> <code>{</code> parentheses</li>
+<li><code>b</code> “(“block</li>
+<li><code>B</code> “{“block</li>
+<li><code>&lt;</code> <code>&gt;</code> <code>”</code> <code>'</code></li>
+</ul>
+<h2 id="shortcuts">Shortcuts</h2>
+<ul>
+<li><code>cc</code> correct line</li>
+<li><code>dd</code> delete line</li>
+<li><code>C</code> correct all after cursor</li>
+<li><code>D</code> delete all after cursor</li>
+</ul>
+<h1 id="editing-1">Editing</h1>
+<ul>
+<li><code>c-a</code> last inserted text</li>
+<li><code>c-n</code> next word</li>
+<li><code>c-p</code> previous word</li>
+<li><code>c-x c-]</code> tag completion</li>
+<li><code>c-x c-f</code> file completion</li>
+<li><code>c-x c-l</code> line completion</li>
+<li><code>c-x c-p</code> <code>c-x c-n</code> context-aware word completion</li>
+<li><code>c-x c-o</code> language-aware completion</li>
+<li><code>c-u</code> erase line</li>
+<li><code>c-w</code> erase word</li>
+</ul>
+<h1 id="moving">Moving</h1>
+<ul>
+<li><code>h</code> left</li>
+<li><code>j</code> down</li>
+<li><code>k</code> up</li>
+<li><code>l</code> right</li>
+<li><code>w</code> word forward</li>
+<li><code>b</code> word backward</li>
+<li><code>e</code> forward to the end of word</li>
+<li><code>ge</code> backward to the end of word</li>
+<li><code>gE</code> backward to the end of WORD</li>
+<li><code>0</code> first character of the line</li>
+<li><code>^</code> first non-blank character of the line</li>
+<li><code>$</code> last character of the line</li>
+<li><code>gg</code> top of file</li>
+<li><code>G</code> end of file</li>
+<li><code>%</code> go to matched parentheses</li>
+<li><code>fx</code> <code>Fx</code> find next x</li>
+<li><code>tx</code> <code>Tx</code> find till next x</li>
+<li><code>[</code> <code>]</code></li>
+<li><code>{</code> <code>}</code></li>
+</ul>
+<h1 id="scrolling">Scrolling</h1>
+<ul>
+<li><code>z.</code> cursor move as center</li>
+<li><code>zt</code> cursor move as top</li>
+<li><code>zb</code> cursor move as bottom</li>
+<li><code>c-u</code> scroll up one page</li>
+<li><code>c-f</code> scroll down one line</li>
+<li><code>c-y</code> scroll up one page</li>
+<li><code>c-e</code> scroll down one line</li>
+</ul>
+<h1 id="searchingreplacing">Searching/Replacing</h1>
+<ul>
+<li><code>#</code> search currenct word</li>
+<li><code>/</code> search input word</li>
+<li><code>?</code> search input word from bottom</li>
+<li><code>/&lt;xxx/&gt;</code> match whole word of “xxx”</li>
+<li><code>%/s/src/dst</code> replace “src” with “dst”</li>
+<li><code>%/s/src/dst/g</code> replace all “src” with “dst”</li>
+<li><code>%/s/src/dst/c</code> replace “src” with “dst”, with confirmation</li>
+</ul>
+<h1 id="buffers">Buffers</h1>
+<ul>
+<li><code>bdelete</code></li>
+<li><code>bNext</code> <code>bprevious</code></li>
+</ul>
+<h1 id="tabswindows">Tabs/Windows</h1>
+<ul>
+<li><code>split</code> <code>vsplit</code></li>
+<li><code>c-w r</code> swap window</li>
+<li><code>c-w h</code> <code>c-w j</code> <code>c-w k</code> <code>c-w l</code> move cursor</li>
+<li><code>tabedit</code> edit with tab</li>
+<li><code>gt</code> next tab</li>
+<li><code>gT</code> previous tab</li>
+</ul>
+<h1 id="quickfixlocation">Quickfix/Location</h1>
+<ul>
+<li><code>copen</code> <code>lopen</code></li>
+<li><code>cNext</code> <code>cprevious</code></li>
+<li><code>cclose</code></li>
+</ul>
+<h1 id="macro">Macro</h1>
+<ul>
+<li><code>qa</code> record “a” macro</li>
+<li><code>@a</code> execute “a” macro</li>
+</ul>
+<h1 id="g-commands"><code>g</code> Commands</h1>
+<ul>
+<li><code>g C-g</code> count words</li>
+<li><code>ga</code> ASCII code</li>
+<li><code>g8</code> print hex value in UTF-8</li>
+<li><code>g?</code> Rot13 encoding</li>
+<li><code>gd</code> <code>gD</code> go to definition</li>
+<li><code>gm</code> go to middle of screen line</li>
+<li><code>gM</code> go to middle of text line</li>
+<li><code>gs</code> go to sleep</li>
+</ul>
+<h1 id="tricks">Tricks</h1>
+<ul>
+<li><code>%s/\s\+$//</code> remove trailing spaces</li>
+<li>Add comment to multiple lines:
+<ul>
+<li>Select with <code>c-v</code></li>
+<li><code>I</code></li>
+<li>Input comment, e.g. <code>//</code> or <code>#</code></li>
+<li><code>ESC</code></li>
+</ul></li>
+</ul>
+<h1 id="shell">Shell</h1>
+<ul>
+<li><code>!sh echo $PATH</code> execute shell</li>
+<li><code>read /path/to/file</code> read a file</li>
+<li><code>read !date</code> read a date</li>
+<li><code>read !date +\%s</code> read a timestamp</li>
+</ul>
+<h1 id="session">Session</h1>
+<ul>
+<li><code>mksession! /path/to/session.vim</code> make session</li>
+<li><code>vim -S /path/to/session.vim</code> start with session</li>
+</ul>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://www.fprintf.net/vimCheatSheet.html">https://www.fprintf.net/vimCheatSheet.html</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html">http://vimdoc.sourceforge.net/htmldoc/motion.html</a></li>
+<li><a href="https://georgebrock.github.io/talks/vim-completion/">https://georgebrock.github.io/talks/vim-completion/</a></li>
+</ul>
+      <footer>
+        <div>Copyright &copy; David Zhang, 2021.</div>
+        <div>
+          Generated by <a href="http://pandoc.org">Pandoc</a> from <a href="https://github.com/vimwiki/vimwiki">VimWiki</a>.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

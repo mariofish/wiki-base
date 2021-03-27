@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>Neovim Lua</title>
+    <link rel="stylesheet" href="/wiki-base/css/style.css" />
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/nord.min.css">
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div class="container">
+      <header id="title-block-header">
+        <h1 class="title">Neovim Lua</h1>
+      </header>
+<p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/gh-pages/index.html">gh-pages</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/gh-pages/wiki/index.html">wiki</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/gh-pages/wiki/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/gh-pages/wiki/programming/language/index.html">language</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/gh-pages/wiki/programming/language/lua/index.html">lua</a></span></p>
+<h1 id="neovim-api">Neovim API</h1>
+<ul>
+<li>nvim_echo</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vim<span class="op">.</span>api<span class="op">.</span>nvim_echo<span class="op">({{</span><span class="st">&#39;hello&#39;</span><span class="op">,</span> <span class="st">&#39;healthError&#39;</span><span class="op">},</span> <span class="op">{</span><span class="st">&#39;world&#39;</span><span class="op">}},</span> <span class="kw">true</span><span class="op">,</span> <span class="op">{})</span></span></code></pre></div>
+<h1 id="system">System</h1>
+<ul>
+<li>current working directory</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> cwd <span class="op">=</span> vim<span class="op">.</span>fn<span class="op">.</span>expand<span class="op">(</span><span class="st">&#39;%:p:h&#39;</span><span class="op">)</span></span></code></pre></div>
+<h1 id="buffer">Buffer</h1>
+<ul>
+<li>get current buf path</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>vim<span class="op">.</span>api<span class="op">.</span>nvim_buf_get_name<span class="op">(</span><span class="dv">0</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li>get lines</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> line <span class="op">=</span> vim<span class="op">.</span>api<span class="op">.</span>nvim_buf_get_lines<span class="op">(</span>bufnr<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="op">-</span><span class="dv">1</span><span class="op">,</span> <span class="kw">false</span><span class="op">)</span></span></code></pre></div>
+<h1 id="window">Window</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- 0 is current window</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>vim<span class="op">.</span>fn<span class="op">.</span>winwidth<span class="op">(</span><span class="dv">0</span><span class="op">)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>vim<span class="op">.</span>fn<span class="op">.</span>winheight<span class="op">(</span><span class="dv">0</span><span class="op">)</span></span></code></pre></div>
+<h1 id="metatable-tricks">Metatable Tricks</h1>
+<ul>
+<li>require automatically by access module property</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> go <span class="op">=</span> <span class="fu">setmetatable</span><span class="op">({},</span> <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">__index</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span>t<span class="op">,</span> k<span class="op">)</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">local</span> ok<span class="op">,</span> val <span class="op">=</span> <span class="fu">pcall</span><span class="op">(</span><span class="fu">require</span><span class="op">,</span> <span class="fu">string.format</span><span class="op">(</span><span class="st">&#39;go.%s&#39;</span><span class="op">,</span> k<span class="op">))</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> ok <span class="cf">then</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>            <span class="fu">rawset</span><span class="op">(</span>t<span class="op">,</span> k<span class="op">,</span> val<span class="op">)</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> val</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="op">})</span></span></code></pre></div>
+      <footer>
+        <div>Copyright &copy; David Zhang, 2021.</div>
+        <div>
+          Generated by <a href="http://pandoc.org">Pandoc</a> from <a href="https://github.com/vimwiki/vimwiki">VimWiki</a>.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

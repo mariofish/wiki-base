@@ -1,7 +1,0 @@
-# Sports
-
-## Soccer
-
-## Rugby
-
-## Handball
