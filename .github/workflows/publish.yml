@@ -25,4 +25,4 @@ jobs:
           git add .
           git commit --allow-empty -m "Auto published at $(date +%Y%m%d-%H:%M:%S)"
           git remote set-url --push origin https://crispgm:${{ secrets.ACCESS_TOKEN }}@github.com/crispgm/wiki-base
-          git push origin gh-pages
+          git push origin main
