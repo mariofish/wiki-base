@@ -4,14 +4,13 @@ jobs:
   publish:
     name: run
     runs-on: ubuntu-latest
+    container:
+      image: docker://pandoc/core:2.9
+      options: --entrypoint=sh
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - name: 'Setup'
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y pandoc
       - name: 'Build'
         run: |
           make init
