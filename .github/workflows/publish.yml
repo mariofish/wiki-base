@@ -1,0 +1,35 @@
+name: publish
+on: push
+jobs:
+  publish:
+    name: run
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: main
+          fetch-depth: 1
+      - uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: main/gh-pages
+      - name: 'Setup'
+        run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          brew install pandoc
+          pandoc -v
+      - name: 'Build'
+        run: |
+          cd main
+          make init
+          make all
+          make clean
+      - name: 'Publish'
+        run: |
+          cd main/gh-pages
+          git config --global user.name 'crispbot'
+          git config --global user.email 'crispbot@users.noreply.github.com'
+          git add .
+          git commit --allow-empty -m "Auto published at $(date +%Y%m%d-%H:%M:%S)"
+          git remote set-url --push origin https://crispgm:${{ secrets.ACCESS_TOKEN }}@github.com/crispgm/wiki-base
+          git push origin gh-pages
