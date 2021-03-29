@@ -18,8 +18,8 @@ local function generate_menu_links(filename)
     local links = {}
     local base_url = '/wiki-base'
 
-    local path = string.gsub(filename, 'docs/', '')
-    path = string.gsub(path, '.md', '')
+    local path = string.gsub(filename, '^gh%-pages/', '')
+    path = string.gsub(path, '.md$', '')
     local locs = path:split('/')
     local cur_url = ''
     if #locs > 1 then -- this prevents adding to global index
