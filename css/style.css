@@ -23,15 +23,15 @@ body {
     Arial, 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
-  color: #333;
-  background-color: #fbfbfb;
+  color: #343a40;
+  background-color: #f8f9fa;
   word-wrap: break-word;
   text-align: center;
   height: 100%;
 }
 
 footer {
-  border-top: 1px solid #aaaaaa;
+  border-top: 1px solid #868e96;
   text-align: center;
   font-size: 1rem;
   overflow: hidden;
@@ -42,7 +42,7 @@ footer {
 
 a {
   text-decoration: none;
-  color: #06c;
+  color: #1864ab;
 }
 
 a:hover {
@@ -143,7 +143,7 @@ ol li p {
   margin: 0;
 }
 
-ul.no-marker {
+ul.task-list {
   list-style: none;
 }
 
