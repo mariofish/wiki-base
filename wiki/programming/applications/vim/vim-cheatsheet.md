@@ -83,6 +83,11 @@
 - `c-x c-o` language-aware completion
 - `c-u` erase line
 - `c-w` erase word
+- multiple lines editing, e.g. Add comment:
+  - Select with `c-v`
+  - `I`
+  - Input comment, e.g. `//` or `#`
+  - `Esc`
 
 ## Moving
 
@@ -162,14 +167,24 @@
 - `gM` go to middle of text line
 - `gs` go to sleep
 
+## Batch Commands
+
+- `bufdo`
+- `tabdo`
+- `cdo`
+- `cfdo`
+- `ldo`
+- `lfdo`
+- `argdo`
+
+## Jumps
+
+- `ctrl+]`: jump to definition
+- `ctrl+o`: jump back
+
 ## Tricks
 
 - `%s/\s\+$//` remove trailing spaces
-- Add comment to multiple lines:
-  - Select with `c-v`
-  - `I`
-  - Input comment, e.g. `//` or `#`
-  - `ESC`
 
 ## Shell
 
