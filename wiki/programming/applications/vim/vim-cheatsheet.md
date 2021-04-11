@@ -5,6 +5,7 @@
 - `:e` edit
 - `:w` write
 - `:q` quit
+- `:noautocmd w` write without running autocommands
 
 ## Mode
 
@@ -179,8 +180,8 @@
 
 ## Jumps
 
-- `ctrl+]`: jump to definition
-- `ctrl+o`: jump back
+- `ctrl+]` jump to definition
+- `ctrl+o` jump back
 
 ## Tricks
 
