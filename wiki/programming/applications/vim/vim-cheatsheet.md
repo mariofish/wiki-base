@@ -1,5 +1,13 @@
 # VIM Cheatsheet
 
+## Open
+
+- `vim /path/to/file +10` open with line number
+- `vim /path/to/file +/pattern` open with pattern
+- `vim -p file1 file2 ...` open with tab
+- `vim -o file1 file2 ...` open with split
+- `vim -O file1 file2 ...` open with vsplit
+
 ## File
 
 - `:e` edit
@@ -25,11 +33,15 @@
 - `O` insert previous line
 - `r` replace
 - `x` erase
-- `s` erase and enter “i” mode
+- `s` erase and enter insert mode
 - `u` undo
 - `U` undo all
 - `c-r` redo
+- `y` yank
+- `p` paste
+- `[range]copy.` `[range]t.` copy line 10 and paste
 - `~` switch case
+- `m` move line
 - `c-a` add number
 - `c-x` subtract number
 - `<` left indent
@@ -37,6 +49,8 @@
 - `=` syntax indent
 - `J` remove newline char
 - `.` repeat last command
+- `changes` print change list
+- `g;` `g,` jump change forward/backward
 
 ## Editing w/ Motion
 
@@ -72,23 +86,29 @@
 - `C` correct all after cursor
 - `D` delete all after cursor
 
-## Editing
+## Editing (Insert Mode)
 
 - `c-a` last inserted text
 - `c-n` next word
 - `c-p` previous word
-- `c-x c-]` tag completion
-- `c-x c-f` file completion
-- `c-x c-l` line completion
-- `c-x c-p` `c-x c-n` context-aware word completion
-- `c-x c-o` language-aware completion
 - `c-u` erase line
 - `c-w` erase word
+- `c-y` copy character above
+- `c-e` copy character below
+- `c-r` invoke register
 - multiple lines editing, e.g. Add comment:
   - Select with `c-v`
   - `I`
   - Input comment, e.g. `//` or `#`
   - `Esc`
+
+## Completion (Insert Mode)
+
+- `c-x c-]` tag completion
+- `c-x c-f` file completion
+- `c-x c-l` line completion
+- `c-x c-p` `c-x c-n` context-aware word completion
+- `c-x c-o` language-aware completion
 
 ## Moving
 
@@ -109,8 +129,8 @@
 - `%` go to matched parentheses
 - `fx` `Fx` find next x
 - `tx` `Tx` find till next x
-- `[` `]`
-- `{` `}`
+- `[[` `]]` section forward/backward
+- `{` `}` paragraph forward/backward
 
 ## Scrolling
 
@@ -131,6 +151,10 @@
 - `%/s/src/dst` replace “src” with “dst”
 - `%/s/src/dst/g` replace all “src” with “dst”
 - `%/s/src/dst/c` replace “src” with “dst”, with confirmation
+- `g/pattern/d` remove lines matching pattern
+- `g!/pattern/d` remove lines that do NOT match pattern
+- `v/pattern/d` remove lines that do NOT match pattern
+- `%s/\s\+$//` remove trailing spaces
 
 ## Buffers
 
@@ -142,6 +166,10 @@
 - `split` `vsplit`
 - `c-w r` swap window
 - `c-w h` `c-w j` `c-w k` `c-w l` move cursor
+- `c-w o` close all other windows
+- `c-w f` split file under cursor
+- `c-w H` change split [to](to) horizontal
+- `c-w K` change split [to](to) vertical
 - `tabedit` edit with tab
 - `gt` next tab
 - `gT` previous tab
@@ -161,7 +189,11 @@
 
 - `g C-g` count words
 - `ga` ASCII code
+- `gv` reselect visual
+- `gn` next search pattern with visually selection
 - `g8` print hex value in UTF-8
+- `gw` format and wrap
+- `gx` open with browser
 - `g?` Rot13 encoding
 - `gd` `gD` go to definition
 - `gm` go to middle of screen line
@@ -183,9 +215,9 @@
 - `ctrl+]` jump to definition
 - `ctrl+o` jump back
 
-## Tricks
+## Others
 
-- `%s/\s\+$//` remove trailing spaces
+- `ab` abbreviations
 
 ## Shell
 
