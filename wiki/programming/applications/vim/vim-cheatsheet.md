@@ -39,9 +39,9 @@
 - `c-r` redo
 - `y` yank
 - `p` paste
-- `[range]copy.` `[range]t.` copy line 10 and paste
+- `:[range]copy.` `:[range]t.` copy line 10 and paste
 - `~` switch case
-- `m` move line
+- `:m +1` move line
 - `c-a` add number
 - `c-x` subtract number
 - `<` left indent
@@ -49,7 +49,7 @@
 - `=` syntax indent
 - `J` remove newline char
 - `.` repeat last command
-- `changes` print change list
+- `:changes` print change list
 - `g;` `g,` jump change forward/backward
 
 ## Editing w/ Motion
@@ -153,23 +153,23 @@
 - `/` search input word
 - `?` search input word from bottom
 - `/<xxx/>` match whole word of “xxx”
-- `%/s/src/dst` replace “src” with “dst”
-- `%/s/src/dst/g` replace all “src” with “dst”
-- `%/s/src/dst/c` replace “src” with “dst”, with confirmation
-- `g/pattern/d` remove lines matching pattern
-- `g!/pattern/d` remove lines that do NOT match pattern
-- `v/pattern/d` remove lines that do NOT match pattern
-- `%s/\s\+$//` remove trailing spaces
-- `%s/pattern//n` count pattern occurance
+- `:%/s/src/dst` replace “src” with “dst”
+- `:%/s/src/dst/g` replace all “src” with “dst”
+- `:%/s/src/dst/c` replace “src” with “dst”, with confirmation
+- `:g/pattern/d` remove lines matching pattern
+- `:g!/pattern/d` remove lines that do NOT match pattern
+- `:v/pattern/d` remove lines that do NOT match pattern
+- `:%s/\s\+$//` remove trailing spaces
+- `:%s/pattern//n` count pattern occurance
 
 ## Buffers
 
-- `bdelete`
-- `bNext` `bprevious`
+- `:bdelete`
+- `:bNext` `:bprevious`
 
 ## Tabs/Windows
 
-- `split` `vsplit`
+- `:split` `:vsplit`
 - `c-w r` swap window right/down
 - `c-w R` swap window left/up
 - `c-w h` `c-w j` `c-w k` `c-w l` move cursor
@@ -178,15 +178,15 @@
 - `c-w f` split file under cursor
 - `c-w H` change split [to](to) horizontal
 - `c-w K` change split [to](to) vertical
-- `tabedit` edit with tab
+- `:tabedit` edit with tab
 - `gt` next tab
 - `gT` previous tab
 
 ## Quickfix/Location
 
-- `copen` `lopen`
-- `cNext` `cprevious`
-- `cclose`
+- `:copen` `:lopen`
+- `:cNext` `:cprevious`
+- `:cclose`
 
 ## Macro
 
@@ -210,13 +210,13 @@
 
 ## Batch Commands
 
-- `bufdo`
-- `tabdo`
-- `cdo`
-- `cfdo`
-- `ldo`
-- `lfdo`
-- `argdo`
+- `:bufdo`
+- `:tabdo`
+- `:cdo`
+- `:cfdo`
+- `:ldo`
+- `:lfdo`
+- `:args` `:argdo`
 
 ## Jumps
 
@@ -230,19 +230,19 @@
 
 ## Others
 
-- `ab` abbreviations
-- `set scrollbind` scroll splits simultaneously
+- `:ab` abbreviations
+- `:set scrollbind` scroll splits simultaneously
 
 ## Shell
 
-- `!sh echo $PATH` execute shell
-- `read /path/to/file` read a file
-- `read !date` read a date
-- `read !date +\%s` read a timestamp
+- `:!sh echo $PATH` execute shell
+- `:read /path/to/file` read a file
+- `:read !date` read a date
+- `:read !date +\%s` read a timestamp
 
 ## Session
 
-- `mksession! /path/to/session.vim` make session
+- `:mksession! /path/to/session.vim` make session
 - `vim -S /path/to/session.vim` start with session
 
 ## References
