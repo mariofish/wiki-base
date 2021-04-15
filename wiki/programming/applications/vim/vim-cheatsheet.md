@@ -142,6 +142,11 @@
 - `c-y` scroll up one page
 - `c-e` scroll down one line
 
+## Command
+
+- `c-f` open command history
+- `c-c` close command history
+
 ## Searching/Replacing
 
 - `#` search currenct word
@@ -155,6 +160,7 @@
 - `g!/pattern/d` remove lines that do NOT match pattern
 - `v/pattern/d` remove lines that do NOT match pattern
 - `%s/\s\+$//` remove trailing spaces
+- `%s/pattern//n` count pattern occurance
 
 ## Buffers
 
@@ -164,8 +170,10 @@
 ## Tabs/Windows
 
 - `split` `vsplit`
-- `c-w r` swap window
+- `c-w r` swap window right/down
+- `c-w R` swap window left/up
 - `c-w h` `c-w j` `c-w k` `c-w l` move cursor
+- `c-w H` `c-w J` `c-w K` `c-w L` move window
 - `c-w o` close all other windows
 - `c-w f` split file under cursor
 - `c-w H` change split [to](to) horizontal
@@ -215,9 +223,15 @@
 - `ctrl+]` jump to definition
 - `ctrl+o` jump back
 
+## Merge Conflicts
+
+- `]n` go to next conflict marker
+- `[n` go to previous conflict marker
+
 ## Others
 
 - `ab` abbreviations
+- `set scrollbind` scroll splits simultaneously
 
 ## Shell
 
