@@ -159,6 +159,11 @@
 <li><code>c-y</code> scroll up one page</li>
 <li><code>c-e</code> scroll down one line</li>
 </ul>
+<h1 id="command">Command</h1>
+<ul>
+<li><code>c-f</code> open command history</li>
+<li><code>c-c</code> close command history</li>
+</ul>
 <h1 id="searchingreplacing">Searching/Replacing</h1>
 <ul>
 <li><code>#</code> search currenct word</li>
@@ -172,6 +177,7 @@
 <li><code>g!/pattern/d</code> remove lines that do NOT match pattern</li>
 <li><code>v/pattern/d</code> remove lines that do NOT match pattern</li>
 <li><code>%s/\s\+$//</code> remove trailing spaces</li>
+<li><code>%s/pattern//n</code> count pattern occurance</li>
 </ul>
 <h1 id="buffers">Buffers</h1>
 <ul>
@@ -181,8 +187,10 @@
 <h1 id="tabswindows">Tabs/Windows</h1>
 <ul>
 <li><code>split</code> <code>vsplit</code></li>
-<li><code>c-w r</code> swap window</li>
+<li><code>c-w r</code> swap window right/down</li>
+<li><code>c-w R</code> swap window left/up</li>
 <li><code>c-w h</code> <code>c-w j</code> <code>c-w k</code> <code>c-w l</code> move cursor</li>
+<li><code>c-w H</code> <code>c-w J</code> <code>c-w K</code> <code>c-w L</code> move window</li>
 <li><code>c-w o</code> close all other windows</li>
 <li><code>c-w f</code> split file under cursor</li>
 <li><code>c-w H</code> change split <a href="to">to</a> horizontal</li>
@@ -232,9 +240,15 @@
 <li><code>ctrl+]</code> jump to definition</li>
 <li><code>ctrl+o</code> jump back</li>
 </ul>
+<h1 id="merge-conflicts">Merge Conflicts</h1>
+<ul>
+<li><code>]n</code> go to next conflict marker</li>
+<li><code>[n</code> go to previous conflict marker</li>
+</ul>
 <h1 id="others">Others</h1>
 <ul>
 <li><code>ab</code> abbreviations</li>
+<li><code>set scrollbind</code> scroll splits simultaneously</li>
 </ul>
 <h1 id="shell">Shell</h1>
 <ul>
