@@ -1,0 +1,1 @@
+autocmd! trim_whitespace
