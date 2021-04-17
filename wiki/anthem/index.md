@@ -10,4 +10,5 @@
 - [Montenegro](/anthem/montenegro.md)
 - [Russia](/anthem/russia.md)
 - [Serbia](/anthem/serbia.md)
+- [South Africa](/anthem/south-africa.md)
 - [Ukraine](/anthem/ukraine.md)
