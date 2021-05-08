@@ -1,3 +1,3 @@
 # What do Wednesday, Thursday, and Friday mean in English?
 
-They represents Odin, Thor , and Freya.
+They represents Odin, Thor, and Freya.
