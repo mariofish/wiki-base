@@ -16,11 +16,11 @@ Raskinulis nashi lesa i polya.
 Odna ty na svete! Odna ty takaya —  
 Khranimaya Bogom rodnaya zemlya!
 
-    _Chorus_
+> _Chorus_
 
 Shiroky prostor dlya mechty i dlya zhizni  
 Gryadushchiye nam otkryvayut goda.  
 Nam silu dayot nasha vernost Otchizne.  
 Tak bylo, tak yest i tak budet vsegda!
 
-    _Chorus_
+> _Chorus_
