@@ -6,6 +6,7 @@
   - [Ruby](/programming/language/ruby/index.md)
   - [PHP](/programming/language/php/index.md)
   - [Python](/programming/language/python/index.md)
+  - [Rust](/programming/language/rust/index.md)
 - [Design](/programming/design/index.md)
 - [Database](/programming/database/index.md)
 - [Operating System](/programming/operating-system/index.md)
