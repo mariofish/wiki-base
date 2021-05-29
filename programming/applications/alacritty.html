@@ -16,6 +16,17 @@
         <h1 class="title">Alacritty</h1>
       </header>
 <p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/applications/index.html">applications</a></span></p>
+<h1 id="build-alacritty-for-m1-mac">Build Alacritty for M1 Mac</h1>
+<ol type="1">
+<li><p>First, clone Alacritty source.</p></li>
+<li><p>Checkout to tags you want to build with (e.g. v0.8.0):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout v0.8.0</span></code></pre></div></li>
+<li><p>Build with Cargo and release with <code>aarch64</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">cargo</span> build <span class="at">--release</span> <span class="at">--target</span><span class="op">=</span>aarch64-apple-darwinv</span></code></pre></div></li>
+<li><p>Goto release folder and replace binary:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /target/aarch64-apple-darwin/release</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> alacritty /Applications/Alacritty.app/Contents/MacOS</span></code></pre></div></li>
+</ol>
       <footer>
         <div>Copyright &copy; David Zhang, 2021.</div>
         <div>
