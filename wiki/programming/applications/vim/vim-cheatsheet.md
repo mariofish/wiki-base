@@ -13,7 +13,9 @@
 - `:e` edit
 - `:w` write
 - `:q` quit
+- `:saveas` save as file
 - `:noautocmd w` write without running autocommands
+- `:help keyword` help
 
 ## Mode
 
@@ -81,8 +83,10 @@
 
 ### Shortcuts
 
+- `yy` yank line
 - `cc` correct line
 - `dd` delete line
+- `Y` default is equal to `yy`, but to make it consistent, map it with `y$`
 - `C` correct all after cursor
 - `D` delete all after cursor
 
