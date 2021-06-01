@@ -5,7 +5,7 @@ local title
 local function promote_header(header)
 
     if header.level >= 2 then
-        header.level = header.level - 1
+        -- header.level = header.level - 1
         return header
     end
 
