@@ -16,7 +16,7 @@
         <h1 class="title">Rails Tips</h1>
       </header>
 <p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/index.html">language</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/ruby/index.html">ruby</a></span></p>
-<h2 id="postgres">Postgres</h2>
+<h3 id="postgres">Postgres</h3>
 <pre class="shell"><code># run pg
 pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
@@ -29,7 +29,7 @@ CREATE USER postgres SUPERUSER;
 # alter role
 alter role dripcoffee with LOGIN;
 alter role dripcoffee with CREATEDB;</code></pre>
-<h2 id="running-rails">Running Rails</h2>
+<h3 id="running-rails">Running Rails</h3>
 <pre class="shell"><code>RAILS_ENV=production rake assets:precompile
 
 RAILS_ENV=production bin/rails db:migrate

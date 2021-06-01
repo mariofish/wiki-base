@@ -16,17 +16,17 @@
         <h1 class="title">Ruby Env Setup</h1>
       </header>
 <p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/index.html">language</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/ruby/index.html">ruby</a></span></p>
-<h2 id="install-ruby">Install Ruby</h2>
+<h3 id="install-ruby">Install Ruby</h3>
 <pre class="shell"><code>brew install ruby</code></pre>
-<h2 id="install-nokogiri">Install nokogiri</h2>
+<h3 id="install-nokogiri">Install nokogiri</h3>
 <pre class="shell"><code>brew install libxml2
 gem install nokogiri -- --with-xml2-include=/usr/local/Cellar/libxml2/2.9.4/include/libxml2 --use-system-libraries</code></pre>
-<h2 id="gem-remove-all">Gem remove all</h2>
+<h3 id="gem-remove-all">Gem remove all</h3>
 <pre class="shell"><code>gem uninstall -aIx</code></pre>
-<h2 id="gem-source">Gem Source</h2>
+<h3 id="gem-source">Gem Source</h3>
 <pre class="shell"><code>gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 bundle config mirror.https://rubygems.org https://gems.ruby-china.com</code></pre>
-<h2 id="install-libexif">Install libexif</h2>
+<h3 id="install-libexif">Install libexif</h3>
 <pre class="shell"><code>brew install libexif
 CPATH=$(brew --prefix libexif)/include gem install exif</code></pre>
       <footer>

@@ -16,7 +16,7 @@
         <h1 class="title">VIM Cheatsheet</h1>
       </header>
 <p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/applications/index.html">applications</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/applications/vim/index.html">vim</a></span></p>
-<h1 id="open">Open</h1>
+<h2 id="open">Open</h2>
 <ul>
 <li><code>vim /path/to/file +10</code> open with line number</li>
 <li><code>vim /path/to/file +/pattern</code> open with pattern</li>
@@ -24,7 +24,7 @@
 <li><code>vim -o file1 file2 ...</code> open with split</li>
 <li><code>vim -O file1 file2 ...</code> open with vsplit</li>
 </ul>
-<h1 id="file">File</h1>
+<h2 id="file">File</h2>
 <ul>
 <li><code>:e</code> edit</li>
 <li><code>:w</code> write</li>
@@ -33,13 +33,13 @@
 <li><code>:noautocmd w</code> write without running autocommands</li>
 <li><code>:help keyword</code> help</li>
 </ul>
-<h1 id="mode">Mode</h1>
+<h2 id="mode">Mode</h2>
 <ul>
 <li><code>v</code> visual</li>
 <li><code>V</code> visual line</li>
 <li><code>c-v</code> visual block</li>
 </ul>
-<h1 id="editing">Editing</h1>
+<h2 id="editing">Editing</h2>
 <ul>
 <li><code>i</code> insert before</li>
 <li><code>I</code> insert at the head of line</li>
@@ -70,8 +70,8 @@
 <li><code>:changes</code> print change list</li>
 <li><code>g;</code> <code>g,</code> jump change forward/backward</li>
 </ul>
-<h1 id="editing-w-motion">Editing w/ Motion</h1>
-<h2 id="commands">Commands</h2>
+<h2 id="editing-w-motion">Editing w/ Motion</h2>
+<h3 id="commands">Commands</h3>
 <ul>
 <li><code>c</code> correct</li>
 <li><code>d</code> delete</li>
@@ -79,13 +79,13 @@
 <li><code>gu</code> to lower</li>
 <li><code>gU</code> to upper</li>
 </ul>
-<h2 id="preposition">Preposition</h2>
+<h3 id="preposition">Preposition</h3>
 <ul>
 <li><code>i</code> inner</li>
 <li><code>a</code> “a”</li>
 <li><code>t</code> till</li>
 </ul>
-<h2 id="objects">Objects</h2>
+<h3 id="objects">Objects</h3>
 <ul>
 <li><code>w</code> word</li>
 <li><code>s</code> sentence</li>
@@ -96,7 +96,7 @@
 <li><code>B</code> “{“block</li>
 <li><code>&lt;</code> <code>&gt;</code> <code>”</code> <code>'</code></li>
 </ul>
-<h2 id="shortcuts">Shortcuts</h2>
+<h3 id="shortcuts">Shortcuts</h3>
 <ul>
 <li><code>yy</code> yank line</li>
 <li><code>cc</code> correct line</li>
@@ -105,7 +105,7 @@
 <li><code>C</code> correct all after cursor</li>
 <li><code>D</code> delete all after cursor</li>
 </ul>
-<h1 id="editing-insert-mode">Editing (Insert Mode)</h1>
+<h2 id="editing-insert-mode">Editing (Insert Mode)</h2>
 <ul>
 <li><code>c-a</code> last inserted text</li>
 <li><code>c-n</code> next word</li>
@@ -123,7 +123,7 @@
 <li><code>Esc</code></li>
 </ul></li>
 </ul>
-<h1 id="completion-insert-mode">Completion (Insert Mode)</h1>
+<h2 id="completion-insert-mode">Completion (Insert Mode)</h2>
 <ul>
 <li><code>c-x c-]</code> tag completion</li>
 <li><code>c-x c-f</code> file completion</li>
@@ -131,7 +131,7 @@
 <li><code>c-x c-p</code> <code>c-x c-n</code> context-aware word completion</li>
 <li><code>c-x c-o</code> language-aware completion</li>
 </ul>
-<h1 id="moving">Moving</h1>
+<h2 id="moving">Moving</h2>
 <ul>
 <li><code>h</code> left</li>
 <li><code>j</code> down</li>
@@ -153,7 +153,7 @@
 <li><code>[[</code> <code>]]</code> section forward/backward</li>
 <li><code>{</code> <code>}</code> paragraph forward/backward</li>
 </ul>
-<h1 id="scrolling">Scrolling</h1>
+<h2 id="scrolling">Scrolling</h2>
 <ul>
 <li><code>z.</code> cursor move as center</li>
 <li><code>zt</code> cursor move as top</li>
@@ -163,12 +163,12 @@
 <li><code>c-y</code> scroll up one page</li>
 <li><code>c-e</code> scroll down one line</li>
 </ul>
-<h1 id="command">Command</h1>
+<h2 id="command">Command</h2>
 <ul>
 <li><code>c-f</code> open command history</li>
 <li><code>c-c</code> close command history</li>
 </ul>
-<h1 id="searchingreplacing">Searching/Replacing</h1>
+<h2 id="searchingreplacing">Searching/Replacing</h2>
 <ul>
 <li><code>#</code> search currenct word</li>
 <li><code>/</code> search input word</li>
@@ -183,12 +183,12 @@
 <li><code>:%s/\s\+$//</code> remove trailing spaces</li>
 <li><code>:%s/pattern//n</code> count pattern occurance</li>
 </ul>
-<h1 id="buffers">Buffers</h1>
+<h2 id="buffers">Buffers</h2>
 <ul>
 <li><code>:bdelete</code></li>
 <li><code>:bNext</code> <code>:bprevious</code></li>
 </ul>
-<h1 id="tabswindows">Tabs/Windows</h1>
+<h2 id="tabswindows">Tabs/Windows</h2>
 <ul>
 <li><code>:split</code> <code>:vsplit</code></li>
 <li><code>c-w r</code> swap window right/down</li>
@@ -203,18 +203,18 @@
 <li><code>gt</code> next tab</li>
 <li><code>gT</code> previous tab</li>
 </ul>
-<h1 id="quickfixlocation">Quickfix/Location</h1>
+<h2 id="quickfixlocation">Quickfix/Location</h2>
 <ul>
 <li><code>:copen</code> <code>:lopen</code></li>
 <li><code>:cNext</code> <code>:cprevious</code></li>
 <li><code>:cclose</code></li>
 </ul>
-<h1 id="macro">Macro</h1>
+<h2 id="macro">Macro</h2>
 <ul>
 <li><code>qa</code> record “a” macro</li>
 <li><code>@a</code> execute “a” macro</li>
 </ul>
-<h1 id="g-commands"><code>g</code> Commands</h1>
+<h2 id="g-commands"><code>g</code> Commands</h2>
 <ul>
 <li><code>g C-g</code> count words</li>
 <li><code>ga</code> ASCII code</li>
@@ -229,7 +229,7 @@
 <li><code>gM</code> go to middle of text line</li>
 <li><code>gs</code> go to sleep</li>
 </ul>
-<h1 id="batch-commands">Batch Commands</h1>
+<h2 id="batch-commands">Batch Commands</h2>
 <ul>
 <li><code>:bufdo</code></li>
 <li><code>:tabdo</code></li>
@@ -239,34 +239,34 @@
 <li><code>:lfdo</code></li>
 <li><code>:args</code> <code>:argdo</code></li>
 </ul>
-<h1 id="jumps">Jumps</h1>
+<h2 id="jumps">Jumps</h2>
 <ul>
 <li><code>ctrl+]</code> jump to definition</li>
 <li><code>ctrl+o</code> jump back</li>
 </ul>
-<h1 id="merge-conflicts">Merge Conflicts</h1>
+<h2 id="merge-conflicts">Merge Conflicts</h2>
 <ul>
 <li><code>]n</code> go to next conflict marker</li>
 <li><code>[n</code> go to previous conflict marker</li>
 </ul>
-<h1 id="others">Others</h1>
+<h2 id="others">Others</h2>
 <ul>
 <li><code>:ab</code> abbreviations</li>
 <li><code>:set scrollbind</code> scroll splits simultaneously</li>
 </ul>
-<h1 id="shell">Shell</h1>
+<h2 id="shell">Shell</h2>
 <ul>
 <li><code>:!sh echo $PATH</code> execute shell</li>
 <li><code>:read /path/to/file</code> read a file</li>
 <li><code>:read !date</code> read a date</li>
 <li><code>:read !date +\%s</code> read a timestamp</li>
 </ul>
-<h1 id="session">Session</h1>
+<h2 id="session">Session</h2>
 <ul>
 <li><code>:mksession! /path/to/session.vim</code> make session</li>
 <li><code>vim -S /path/to/session.vim</code> start with session</li>
 </ul>
-<h1 id="references">References</h1>
+<h2 id="references">References</h2>
 <ul>
 <li><a href="https://www.fprintf.net/vimCheatSheet.html">https://www.fprintf.net/vimCheatSheet.html</a></li>
 <li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html">http://vimdoc.sourceforge.net/htmldoc/motion.html</a></li>

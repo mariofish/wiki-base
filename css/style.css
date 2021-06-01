@@ -23,7 +23,7 @@ body {
     Arial, 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
-  color: #343a40;
+  color: #2E3440;
   background-color: #f8f9fa;
   word-wrap: break-word;
   text-align: center;
@@ -31,7 +31,7 @@ body {
 }
 
 footer {
-  border-top: 1px solid #868e96;
+  border-top: 1px solid #D8DEE9;
   text-align: center;
   font-size: 1rem;
   overflow: hidden;
@@ -42,7 +42,7 @@ footer {
 
 a {
   text-decoration: none;
-  color: #1864ab;
+  color: #5E81AC;
 }
 
 a:hover {
@@ -100,7 +100,7 @@ h5 {
 }
 
 blockquote {
-  border-left: 0.2rem solid #aaaaaa;
+  border-left: 0.2rem solid #D8DEE9;
   margin-left: 0;
   padding-left: 1rem;
 }
@@ -120,7 +120,7 @@ sup {
 }
 
 hr {
-  border-top: 1px solid #aaaaaa;
+  border-top: 1px solid #D8DEE9;
   margin-bottom: 3rem;
   margin-top: 3rem;
   width: 30%;
@@ -154,7 +154,7 @@ code {
 }
 
 code {
-  border: 1px solid #aaaaaa;
+  border: 1px solid #D8DEE9;
   border-radius: 4px;
   font-size: 90%;
   font-weight: bold;

@@ -18,14 +18,14 @@
 <p><span class="menu-link"><a href="/wiki-base/index.html">index</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/index.html">programming</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/index.html">language</a></span><span> &gt; </span><span class="menu-link"><a href="/wiki-base/programming/language/rust/index.html">rust</a></span></p>
 <p>Video Tutorial: <a href="https://www.youtube.com/watch?v=lQ7XF-6HYGc" class="uri">https://www.youtube.com/watch?v=lQ7XF-6HYGc</a></p>
 <p>And here are some notes from the video:</p>
-<h1 id="stack-v.s.-heap">Stack v.s. Heap</h1>
-<h2 id="stack">Stack</h2>
+<h2 id="stack-v.s.-heap">Stack v.s. Heap</h2>
+<h3 id="stack">Stack</h3>
 <ul>
 <li>Fast memory creation and retrieval</li>
 <li>Memory is automatically captured by the program after variables go out of scope</li>
 <li>Fixed size variables</li>
 </ul>
-<h2 id="heap">Heap</h2>
+<h3 id="heap">Heap</h3>
 <ul>
 <li>Flexibility</li>
 <li>Memory that can grow size (Vector, HashMap, String, etc)</li>
@@ -33,7 +33,7 @@
 <li>Memory that can live beyond scope that created it</li>
 <li>Memory is automatically recaptured when the last OWNER goes out of scope</li>
 </ul>
-<h1 id="ownership">Ownership</h1>
+<h2 id="ownership">Ownership</h2>
 <ul>
 <li>Rust
 <ul>
@@ -47,7 +47,7 @@
 <li>Parellel and Concurrency issues such as “race condition”.</li>
 </ul></li>
 </ul>
-<h1 id="solution">Solution</h1>
+<h2 id="solution">Solution</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> heap_f64<span class="op">:</span> <span class="dt">Box</span><span class="op">&lt;</span><span class="dt">f64</span><span class="op">&gt;</span> <span class="op">=</span> <span class="dt">Box</span><span class="pp">::</span>new(<span class="dv">2</span><span class="op">.</span>)<span class="op">;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    heap_procedure(heap_f64)<span class="op">;</span></span>
@@ -72,7 +72,7 @@
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    param <span class="op">+=</span> <span class="dv">9</span><span class="op">.</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="pp">println!</span>(<span class="st">&quot;In heap procedure {}&quot;</span><span class="op">,</span> param)<span class="op">;</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="why-this-is-necessary">Why this is necessary?</h1>
+<h2 id="why-this-is-necessary">Why this is necessary?</h2>
 <ul>
 <li>Eliminates memory issues (null pointers, dangling pointers, data races)</li>
 <li>Eliminates Garbage Collector</li>
