@@ -7,3 +7,4 @@
 - [tar: argument list too long wrong](/programming/shell/bash/tar-argument-list-too-long-wrong.md)
 - [How to run `top` with specific PID?](/programming/shell/bash/how-to-run-top-with-specific-pid.md)
 - [What is `set -e`](/programming/shell/bash/what-is-set-e.md)
+- [What is `2>&1`](/programming/shell/bash/output-redirection.md)
