@@ -8,8 +8,10 @@ When in Visual mode, pressing `:` inserts the range:
 :'<,'>
 ```
 
-Mappiing with `c-u` remove the range and execute the following command:
+Mapping with `c-u` removes the range and then executes the following command:
 
 ```viml
 nnoremap foo :<C-u>bar
 ```
+
+<https://vi.stackexchange.com/questions/9751/understanding-ctrl-u-combination>
