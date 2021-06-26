@@ -8,3 +8,12 @@ Dov'è la Vittoria?
 Le porga la chioma,  
 ché schiava di Roma  
 Iddio la creò.
+
+Stringiamci a coorte,  
+siam pronti alla morte.  
+Siam pronti alla morte,  
+l'Italia chiamò.  
+Stringiamci a coorte,  
+siam pronti alla morte.  
+Siam pronti alla morte,  
+l'Italia chiamò!
