@@ -1,3 +1,5 @@
+# Foosball 101
+
 ## Introduction
 
 ## Rules
