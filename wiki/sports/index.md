@@ -7,6 +7,8 @@
 
 ## Soccer
 
+- [Soccer Jersey I own](/sports/soccer/jersey-i-own.md)
+
 ## Rugby
 
 ## Handball
