@@ -5,9 +5,9 @@
 ### Knowledge
 
 - [Programming](/programming/index.md)
-- [Idols](/idols/index.md)
-- [History](/history/index.md)
+- [Lifestyle](/lifestyle/index.md)
 - [Sports](/sports/index.md)
+- [History](/history/index.md)
 - [Language](/language/index.md)
 - [Anthem](/anthem/index.md)
 - [Trivia](/trivia/index.md)
