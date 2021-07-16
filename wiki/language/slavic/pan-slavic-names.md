@@ -4,7 +4,7 @@
 
 - _-ов_ (-ov), _-ев_ (-yev): meaning "belonging to" or "of the clan of/descendant of".
 - _-ский_ (-sky): an adjectival form meaning "associated with" and usually used for toponymic surnames.
-- _-ović/-ević_, _-ić_: patronyms
+- _-ović/-ević_, _-ić_: patronyms.
 
 ## Reference
 

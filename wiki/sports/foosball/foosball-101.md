@@ -85,7 +85,7 @@
   - World #1 player in the Tornado world and good at snakeshot.
   - Wiki: <https://en.wikipedia.org/wiki/Tony_Spredeman>
 - Billy Pappas
-- World champion in foosball and #5 in Texas Hold'em tournament, where he won 2.1m.
+  - World champion in foosball and #5 in Texas Hold'em tournament, where he won 2.1m.
   - Wiki: <https://en.wikipedia.org/wiki/Billy_Pappas>
 - Ryan Moore
   - World champion and famous for its powerful goalie pullshot.

@@ -7,7 +7,7 @@
 
 ## Soccer
 
-- [Soccer Jersey I own](/sports/soccer/jersey-i-own.md)
+- [Soccer Jersey I Own](/sports/soccer/jersey-i-own.md)
 
 ## Rugby
 
