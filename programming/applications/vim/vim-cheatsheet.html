@@ -20,6 +20,7 @@
 <ul>
 <li><code>vim /path/to/file +10</code> open with line number</li>
 <li><code>vim /path/to/file +/pattern</code> open with pattern</li>
+<li><code>vim /path/to/file +LspInfo</code> open with command</li>
 <li><code>vim -p file1 file2 ...</code> open with tab</li>
 <li><code>vim -o file1 file2 ...</code> open with split</li>
 <li><code>vim -O file1 file2 ...</code> open with vsplit</li>
@@ -57,25 +58,27 @@
 <li><code>c-r</code> redo</li>
 <li><code>y</code> yank</li>
 <li><code>p</code> paste</li>
-<li><code>:[range]copy.</code> <code>:[range]t.</code> copy line 10 and paste</li>
 <li><code>~</code> switch case</li>
-<li><code>:m +1</code> move line</li>
 <li><code>c-a</code> add number</li>
 <li><code>c-x</code> subtract number</li>
-<li><code>&lt;</code> left indent</li>
-<li><code>&gt;</code> right indent</li>
+<li><code>&lt;&lt;</code> shift line leftwards</li>
+<li><code>&gt;&gt;</code> shift line rightwards</li>
 <li><code>=</code> syntax indent</li>
 <li><code>J</code> remove newline char</li>
 <li><code>.</code> repeat last command</li>
-<li><code>:changes</code> print change list</li>
-<li><code>g;</code> <code>g,</code> jump change forward/backward</li>
 </ul>
-<h2 id="editing-w-motion">Editing w/ Motion</h2>
 <h3 id="commands">Commands</h3>
+<ul>
+<li><code>:move +1</code> <code>:move -1</code> move line</li>
+<li><code>:[range]copy.</code> <code>:[range]t.</code> copy line 10 and paste</li>
+<li><code>:changes</code> print change list</li>
+</ul>
+<h3 id="w-motion">w/ Motion</h3>
 <ul>
 <li><code>c</code> correct</li>
 <li><code>d</code> delete</li>
 <li><code>y</code> yank (copy)</li>
+<li><code>g~</code> switch case</li>
 <li><code>gu</code> to lower</li>
 <li><code>gU</code> to upper</li>
 </ul>
@@ -85,7 +88,7 @@
 <li><code>a</code> “a”</li>
 <li><code>t</code> till</li>
 </ul>
-<h3 id="objects">Objects</h3>
+<h3 id="text-objects">Text Objects</h3>
 <ul>
 <li><code>w</code> word</li>
 <li><code>s</code> sentence</li>
@@ -105,7 +108,7 @@
 <li><code>C</code> correct all after cursor</li>
 <li><code>D</code> delete all after cursor</li>
 </ul>
-<h2 id="editing-insert-mode">Editing (Insert Mode)</h2>
+<h3 id="insert-mode">Insert Mode</h3>
 <ul>
 <li><code>c-a</code> last inserted text</li>
 <li><code>c-n</code> next word</li>
@@ -150,8 +153,10 @@
 <li><code>%</code> go to matched parentheses</li>
 <li><code>fx</code> <code>Fx</code> find next x</li>
 <li><code>tx</code> <code>Tx</code> find till next x</li>
+<li><code>;</code> repeat last <code>f</code> or <code>t</code></li>
 <li><code>[[</code> <code>]]</code> section forward/backward</li>
 <li><code>{</code> <code>}</code> paragraph forward/backward</li>
+<li><code>g;</code> <code>g,</code> jump change forward/backward</li>
 </ul>
 <h2 id="scrolling">Scrolling</h2>
 <ul>
