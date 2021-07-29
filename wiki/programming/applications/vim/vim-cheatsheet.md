@@ -4,6 +4,7 @@
 
 - `vim /path/to/file +10` open with line number
 - `vim /path/to/file +/pattern` open with pattern
+- `vim /path/to/file +LspInfo` open with command
 - `vim -p file1 file2 ...` open with tab
 - `vim -o file1 file2 ...` open with split
 - `vim -O file1 file2 ...` open with vsplit
@@ -41,26 +42,27 @@
 - `c-r` redo
 - `y` yank
 - `p` paste
-- `:[range]copy.` `:[range]t.` copy line 10 and paste
 - `~` switch case
-- `:m +1` move line
 - `c-a` add number
 - `c-x` subtract number
-- `<` left indent
-- `>` right indent
+- `<<` shift line leftwards
+- `>>` shift line rightwards
 - `=` syntax indent
 - `J` remove newline char
 - `.` repeat last command
-- `:changes` print change list
-- `g;` `g,` jump change forward/backward
-
-## Editing w/ Motion
 
 ### Commands
+
+- `:move +1` `:move -1` move line
+- `:[range]copy.` `:[range]t.` copy line 10 and paste
+- `:changes` print change list
+
+### w/ Motion
 
 - `c` correct
 - `d` delete
 - `y` yank \(copy\)
+- `g~` switch case
 - `gu` to lower
 - `gU` to upper
 
@@ -70,7 +72,7 @@
 - `a` “a”
 - `t` till
 
-### Objects
+### Text Objects
 
 - `w` word
 - `s` sentence
@@ -90,7 +92,7 @@
 - `C` correct all after cursor
 - `D` delete all after cursor
 
-## Editing (Insert Mode)
+### Insert Mode
 
 - `c-a` last inserted text
 - `c-n` next word
@@ -133,8 +135,10 @@
 - `%` go to matched parentheses
 - `fx` `Fx` find next x
 - `tx` `Tx` find till next x
+- `;` repeat last `f` or `t`
 - `[[` `]]` section forward/backward
 - `{` `}` paragraph forward/backward
+- `g;` `g,` jump change forward/backward
 
 ## Scrolling
 
