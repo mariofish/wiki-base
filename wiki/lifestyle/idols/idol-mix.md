@@ -31,7 +31,7 @@ Video: [ガチ恋口上之歌](https://www.bilibili.com/video/BV1XJ411w7rC)
 有了你 生命里 全都是奇迹
 失去你 不再有 燃烧的意义
 让我们 再继续 绽放吧生命
-全世界 [所有人](所有人) 我最喜欢你！我最喜欢你！
+全世界 所有人 我最喜欢你！我最喜欢你！
 
 Video: [【BEJ48】《恋爱中的美人鱼》真爱CALL中文版 ](https://www.bilibili.com/video/av5941977/)
 
