@@ -3,7 +3,7 @@ on: push
 jobs:
   publish:
     name: run
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
@@ -15,8 +15,9 @@ jobs:
           path: main/gh-pages
       - name: 'Setup'
         run: |
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-          brew install pandoc
+          sudo apt-get -yqq install wget
+          wget https://github.com/jgm/pandoc/releases/download/2.14.1/pandoc-2.14.1-1-amd64.deb
+          sudo dpkg -i pandoc-2.14.1-1-amd64.deb
           pandoc -v
       - name: 'Build'
         run: |
