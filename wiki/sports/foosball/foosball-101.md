@@ -92,6 +92,15 @@
 
 And many more great players, e.g. Terry Rue.
 
+### Players I Like
+
+- Ryan Moore: Best pull shooter
+- Todd Loffredo: Legend player and famous for his pullshot
+- Terry Rue: A master but with significant personal career on daily job
+- Tom Yore: World champion who pull shoots
+- Blake Robertson: Another world champion who pull shoots occasionally
+- Dylan Marshall: Florida pull shooter, love the way he plays
+
 ## Video
 
 ### Documentary
