@@ -8,3 +8,4 @@
 - [How to run `top` with specific PID?](/programming/shell/bash/how-to-run-top-with-specific-pid.md)
 - [What is `set -e`](/programming/shell/bash/what-is-set-e.md)
 - [What is `2>&1`](/programming/shell/bash/output-redirection.md)
+- [What is `command(1)`](/programming/shell/bash/what-is-command-1.md)
