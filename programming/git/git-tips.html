@@ -103,10 +103,16 @@ git stash list</code></pre>
 <h3 id="revert-a-merge">Revert a merge</h3>
 <pre class="shell"><code>git revert -m 1 &lt;merge-commit-hash&gt;</code></pre>
 <h3 id="tag">Tag</h3>
-<pre class="shell"><code>git tag tag-name
+<pre class="shell"><code># create tag
+git tag tag-name
 git push origin tag-name
+# delete tag
 git tag -d tag-name
-git push --delete origin tag-name</code></pre>
+git push --delete origin tag-name
+# rename tag
+git tag new old
+git tag -d old
+git push origin new :old</code></pre>
       <footer>
         <div>Copyright &copy; David Zhang, 2021.</div>
         <div>
