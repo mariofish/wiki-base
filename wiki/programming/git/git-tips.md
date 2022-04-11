@@ -148,8 +148,14 @@ git revert -m 1 <merge-commit-hash>
 ### Tag
 
 ```shell
+# create tag
 git tag tag-name
 git push origin tag-name
+# delete tag
 git tag -d tag-name
 git push --delete origin tag-name
+# rename tag
+git tag new old
+git tag -d old
+git push origin new :old
 ```
