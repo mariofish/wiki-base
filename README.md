@@ -1,4 +1,4 @@
-# Personal VimWiki
+# Personal Wiki
 
 Personal wiki as a knowledge base. The wiki language is either in English or in Chinese.
 

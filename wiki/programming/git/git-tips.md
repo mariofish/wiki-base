@@ -83,6 +83,15 @@ git remote set-url [url]
 git remote set-url --push [url]
 ```
 
+### Push to Other's Pull Request
+
+```shell
+git fetch origin pull/[pr_id]/head:[branch-name]
+git remote add pr [url]
+# edit and commit
+git push pr HEAD:[branch-name]
+```
+
 ### Clean untracked files
 
 ```shell
