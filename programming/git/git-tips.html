@@ -63,6 +63,11 @@ git push --force</code></pre>
 git remote set-url [url]
 # Set origin (push)
 git remote set-url --push [url]</code></pre>
+<h3 id="push-to-others-pull-request">Push to Other’s Pull Request</h3>
+<pre class="shell"><code>git fetch origin pull/[pr_id]/head:[branch-name]
+git remote add pr [url]
+# edit and commit
+git push pr HEAD:[branch-name]</code></pre>
 <h3 id="clean-untracked-files">Clean untracked files</h3>
 <pre class="shell"><code>git clean -f -d</code></pre>
 <h3 id="restore-a-deleted-file">Restore a deleted file</h3>
