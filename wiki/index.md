@@ -1,17 +1,13 @@
-# Personal Wiki
+# NiftyBlocks Wiki
 
 ## Table of contents
 
-### Knowledge
+### Blocks
 
-- [Programming](/programming/index.md)
-- [Lifestyle](/lifestyle/index.md)
-- [Sports](/sports/index.md)
-- [History](/history/index.md)
-- [Language](/language/index.md)
-- [Anthem](/anthem/index.md)
-- [Trivia](/trivia/index.md)
+- [Blocks](/blocks/index.md)
 
-### Activities
+### Items
 
-- [Reading](/reading/index.md)
+- [Items](/items/index.md)
+
+
